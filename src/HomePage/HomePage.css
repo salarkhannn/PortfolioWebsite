@@ -1,0 +1,133 @@
+@import url('https://fonts.cdnfonts.com/css/apple-garamond');
+
+/* bg-color: #F1EEED */
+/* orange: #FF5C00 */
+
+
+html, body{
+    font-family: 'Apple Garamond', sans-serif;
+}
+
+.home-page{
+    
+}
+
+/* #rectangleBorder{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    z-index: 999;
+
+    background: none;
+    outline: 1px solid rgb(0, 0, 0);
+    outline-offset: -35px;
+    opacity: 100%;
+}
+
+#rectangleOutline{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0%;
+    left: 0%;
+    z-index: 999;
+
+    outline: 35px solid #F1EEED;
+    outline-offset: -35px;
+} */
+
+#circle{
+    position: absolute;
+    width: 2139px;
+    height: 1947px;
+    background: #FF5C00;
+    border-radius: 50%;
+    right: -63%;
+    bottom: -147%;
+    filter: blur(3000px);
+    z-index: 50;
+}
+
+.about{
+    font-size: 70px;
+    letter-spacing: -2px;
+    width: 60vw;
+    margin-left: 50px;
+    position: absolute;
+    bottom: -5px;
+
+    z-index: 1000;
+    color: black;
+}
+
+.title{
+    font-weight: 500;
+}
+
+.contact-button{
+    cursor: pointer;
+    position: fixed;
+    z-index: 1001;
+    right: 64px;
+    bottom: 83px;
+
+    width: 300px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background: none;
+
+    font-family: 'Apple Garamond', sans-serif;
+    letter-spacing: -2px;
+    font-size: 36px;
+
+    /* Add transition for background-color, font-size, and border */
+    transition: background-color 200ms ease-in-out, font-size 200ms ease-in-out, border 200ms ease-in-out;
+}
+
+.contact-button:hover{
+    background-color: #F1EEED;
+    font-size: 40px;
+    border: 2px solid black;
+}
+
+
+#rectangleTop{
+    position: absolute;
+    z-index: 0;
+    top: -36px;
+    width: 100vw;
+    height: 35px;
+    background-color: #F1EEED;
+}
+
+#rectangleBottom{
+    position: absolute;
+    z-index: 0;
+    bottom: -36px;
+    width: 100vw;
+    height: 35px;
+    background-color: #F1EEED;
+}
+
+#rectangleLeft{
+    position: absolute;
+    z-index: 0;
+    top: -10px;
+    left: -38px;
+    width: 37px;
+    height: 100%;
+    background-color: #F1EEED;
+}
+
+#rectangleRight{
+    position: absolute;
+    z-index: 1001;
+    top: -10px;
+    Right: -38px;
+    width: 37px;
+    height: 100%;
+    background-color: #F1EEED;
+}

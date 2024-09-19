@@ -1,0 +1,120 @@
+body{
+    background-color: #F1EEED;
+}
+
+.branding-page{
+    background-color: #F1EEED;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    outline: 1px solid rgb(0, 0, 0);
+    margin-top: -72px;
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 150px;
+    padding-bottom: 150px;
+
+    position: relative;
+    z-index: 50;
+}
+
+.heading{
+    font-size: 75px;
+    font-weight: 600;
+    letter-spacing: -3px;
+}
+
+.branding-title-container{
+    display: flex;
+    justify-content: center;
+}
+
+.projects-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.project{
+    width: 70vw;
+    height: 95%;
+    margin-bottom: 100px;
+    outline: 1px solid black;
+    box-shadow: 0px 0px;
+    transition: box-shadow 300ms;
+}
+
+.project:hover{
+    box-shadow: 50px 50px;
+}
+
+.cover-image{
+    cursor: pointer;
+    width: 100%;
+    height: auto;
+}
+
+#rectangleTop{
+    position: absolute;
+    z-index: 0;
+    top: -36px;
+    width: 100vw;
+    height: 35px;
+    background-color: #F1EEED;
+}
+
+#rectangleBottom{
+    position: absolute;
+    z-index: 0;
+    bottom: -36px;
+    width: 100vw;
+    height: 35px;
+    background-color: #F1EEED;
+}
+
+#rectangleLeft{
+    position: absolute;
+    z-index: 0;
+    top: -10px;
+    left: -38px;
+    width: 37px;
+    height: 100%;
+    background-color: #F1EEED;
+}
+
+#rectangleRight{
+    position: absolute;
+    z-index: 0;
+    top: -10px;
+    Right: -38px;
+    width: 37px;
+    height: 100%;
+    background-color: #F1EEED;
+}
+
+.contact-button{
+    cursor: pointer;
+    position: fixed;
+    z-index: 1001;
+    right: 64px;
+    bottom: 83px;
+
+    width: 300px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background: none;
+
+    font-family: 'Apple Garamond', sans-serif;
+    letter-spacing: -2px;
+    font-size: 36px;
+
+    /* Add transition for background-color, font-size, and border */
+    transition: background-color 200ms ease-in-out, font-size 200ms ease-in-out, border 200ms ease-in-out;
+}
+
+.contact-button:hover{
+    background-color: #F1EEED;
+    font-size: 40px;
+    border: 2px solid black;
+}
