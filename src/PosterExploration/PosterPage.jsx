@@ -1,4 +1,4 @@
-import './posterPage.css'
+import './PosterPage.css'
 
 import poster1 from '../assets/Posters/SteveLacy.jpg';
 import poster2 from '../assets/Posters/feelthefear.jpg';
