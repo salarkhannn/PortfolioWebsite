@@ -7,7 +7,7 @@ import poster4 from '../assets/Posters/Whiplash.jpg';
 import poster5 from '../assets/Posters/AdidasSambaPoster.jpg';
 import poster6 from '../assets/Posters/AfterHours.jpg';
 import poster7 from '../assets/Posters/HarryAndHisHorse.jpg';
-import poster8 from '../assets/Posters/KimYejiPoster.jpg';
+import poster8 from '../assets/Posters/kimYejiposter.jpg';
 import poster9 from '../assets/Posters/MuhammadAliPoster.jpg';
 import poster10 from '../assets/Posters/TheGirlWithAPearlEaring.jpg';
 
