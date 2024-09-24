@@ -11,55 +11,94 @@ import poster8 from '../assets/Posters/kimYejiposter.jpg';
 import poster9 from '../assets/Posters/MuhammadAliPoster.jpg';
 import poster10 from '../assets/Posters/TheGirlWithAPearlEaring.jpg';
 
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const posters = [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8, poster9, poster10];
+const posters = [poster1, poster4, poster7, poster10];
+const posters2 = [poster2, poster5, poster8];
+const posters3 = [poster3, poster6, poster9];
 
+export const POSTERS = posters.map((poster, index) => ({
+  id: index,
+  url: poster,
+}));
 
-export default function PosterPage(){
-    useEffect(() => {
-        document.body.style.height = '100%';
-        document.body.style.overflowY = 'scroll';
-        document.body.style.maxWidth = '100%';
-        document.body.style.overflowX = 'hidden';
-        document.body.style.backgroundColor = '#F1EEED';
-    })
+export const POSTERS2 = posters2.map((poster, index) => ({
+    id: index,
+    url: poster,
+}));
 
-    return (
-        <div className="poster-page" id="PosterPage">
+export const POSTERS3 = posters3.map((poster, index) => ({
+    id: index,
+    url: poster,
+}));
 
-            {/* <div id="rectangleTop"></div>
-            <div id="rectangleLeft"></div>
-            <div id="rectangleRight"></div>
-            <div id="rectangleBottom"></div> */}
-            
-            <Link to="/contact">
-                <button style={{backgroundColor:"#F1EEED"}} className='contact-button'>Contact me</button>
-            </Link>
+export default function PosterPage() {
+  const [imgsLoaded, setImgsLoaded] = useState(false);
 
-            <div className='posters'>
-                <p className='heading'>Poster Exploration</p>
-                <div className='poster-columns'>
-                    <div className='column'>
-                        {posters.filter((_, index) => index % 3 === 0).map((imgSrc, index) => (
-                            <img className='poster' key={index} src={imgSrc} alt={`Poster ${index + 1}`} />
-                        ))}
-                    </div>
-                    <div className='column'>
-                        {posters.filter((_, index) => index % 3 === 1).map((imgSrc, index) => (
-                            <img className='poster' key={index} src={imgSrc} alt={`Poster ${index + 1}`} />
-                        ))}
-                    </div>
-                    <div className='column'>
-                        {posters.filter((_, index) => index % 3 === 2).map((imgSrc, index) => (
-                            <img className='poster' key={index} src={imgSrc} alt={`Poster ${index + 1}`} />
-                        ))}
-                    </div>
-                </div>
-            </div>
-            {/* <div id="circle1"></div> */}
-            {/* <button className='contact-button'>Contact me</button> */}
+  useEffect(() => {
+    document.body.style.height = '100%';
+    document.body.style.overflowY = 'scroll';
+    document.body.style.maxWidth = '100%';
+    document.body.style.overflowX = 'hidden';
+    document.body.style.backgroundColor = '#F1EEED';
+
+    const loadImage = (image) => {
+      return new Promise((resolve, reject) => {
+        const loadImg = new Image();
+        loadImg.src = image.url;
+
+        loadImg.onload = () => resolve(image.url);
+        loadImg.onerror = (err) => reject(err);
+      });
+    };
+
+    Promise.all(POSTERS.map((image) => loadImage(image)))
+      .then(() => setImgsLoaded(true))
+      .catch((err) => console.log('Failed to load images', err));
+  }, []);
+
+  return (
+    <div className="poster-page" id="PosterPage">
+        {/* <Link to="/contact">
+            <button style={{backgroundColor:"#F1EEED"}} className='contact-button'>Contact me</button>
+        </Link> */}
+        <Link to="/contact">
+            <button style={{backgroundColor:"#F1EEED"}} className='contact-button'>Contact me</button>
+        </Link>
+
+      <div className="posters">
+        <p className="heading">Poster Exploration</p>
+        <div className="poster-columns">
+          <div className="column">
+            {imgsLoaded ? (
+              POSTERS.map((image) => (
+                <img className="poster" key={image.id} src={image.url} alt={`Poster ${image.id + 1}`} />
+              ))
+            ) : (
+              <h1>Loading images...</h1>
+            )}
+          </div>
+          <div className="column">
+            {imgsLoaded ? (
+              POSTERS2.map((image) => (
+                <img className="poster" key={image.id} src={image.url} alt={`Poster ${image.id + 1}`} />
+              ))
+            ) : (
+              <h1>Loading images...</h1>
+            )}
+          </div>
+          <div className="column">
+            {imgsLoaded ? (
+              POSTERS3.map((image) => (
+                <img className="poster" key={image.id} src={image.url} alt={`Poster ${image.id + 1}`} />
+              ))
+            ) : (
+              <h1>Loading images...</h1>
+            )}
+          </div>
         </div>
-    )
+      </div>
+    </div>
+  );
 }

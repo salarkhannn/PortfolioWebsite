@@ -66,6 +66,32 @@
     z-index: -1;
 }
 
+.contact-button{
+    cursor: pointer;
+    position: fixed;
+    z-index: 1001;
+    right: 64px;
+    bottom: 83px;
+
+    width: 300px;
+    height: 100px;
+    border-radius: 50%;
+    border: 3px solid black;
+    background: none;
+
+    font-family: 'Apple Garamond', sans-serif;
+    letter-spacing: -2px;
+    font-size: 36px;
+
+    /* Add transition for background-color, font-size, and border */
+    transition: background-color 200ms ease-in-out, font-size 200ms ease-in-out, border 200ms ease-in-out;
+}
+
+.contact-button:hover{
+    background-color: #F1EEED;
+    font-size: 40px;
+    border: 2px solid black;
+}
 
 #rectangleTop{
     position: absolute;
