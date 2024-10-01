@@ -131,3 +131,16 @@ html, body{
     height: 100%;
     background-color: #F1EEED;
 }
+
+@media (max-width: 950px){
+    .about {
+        font-size: 50px; /* Adjust font size */
+        width: 90vw; /* Make it more flexible for mobile */
+        margin-left: 5vw; /* Center content */
+        
+    }
+
+    .contact-button {
+        display: none;
+    }
+}

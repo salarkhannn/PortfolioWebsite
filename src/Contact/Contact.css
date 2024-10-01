@@ -60,3 +60,11 @@ form button:hover{
     background-color: black;
     color: #F1EEED; 
 }
+
+@media (max-width: 950px){
+    form h2 {
+        margin-top: 100px;
+        font-size: 40px;
+        text-align: center;
+    }
+}

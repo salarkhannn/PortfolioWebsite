@@ -17,6 +17,7 @@ import { Link } from 'react-router-dom';
 const posters = [poster1, poster4, poster7, poster10];
 const posters2 = [poster2, poster5, poster8];
 const posters3 = [poster3, poster6, poster9];
+const posters4 = [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8, poster9, poster10];
 
 export const POSTERS = posters.map((poster, index) => ({
   id: index,
@@ -31,6 +32,11 @@ export const POSTERS2 = posters2.map((poster, index) => ({
 export const POSTERS3 = posters3.map((poster, index) => ({
     id: index,
     url: poster,
+}));
+
+export const POSTERS4 = posters4.map((poster, index) => ({
+  id: index,
+  url: poster,
 }));
 
 export default function PosterPage() {
@@ -91,6 +97,18 @@ export default function PosterPage() {
           <div className="column">
             {imgsLoaded ? (
               POSTERS3.map((image) => (
+                <img className="poster" key={image.id} src={image.url} alt={`Poster ${image.id + 1}`} />
+              ))
+            ) : (
+              <h1>Loading images...</h1>
+            )}
+          </div>
+        </div>
+
+        <div className='mobile-poster-column'>
+        <div className="mobile-column">
+            {imgsLoaded ? (
+              POSTERS4.map((image) => (
                 <img className="poster" key={image.id} src={image.url} alt={`Poster ${image.id + 1}`} />
               ))
             ) : (

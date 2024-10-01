@@ -1,6 +1,13 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Navbar(){
+    const [isDropdownVisible, setIsDropdownVisible] = useState(false);
+
+    const handleMenuClick = () => {
+        setIsDropdownVisible((prevState) => !prevState);
+    };
+
     return (
         <div className="navbar" id="Navbar">
             <p><Link to="/homePage" className="navbar-logo" id="Logo">Salar Khan</Link></p>
@@ -9,6 +16,22 @@ export default function Navbar(){
                 {/* <li><Link to="/drawingPage" className="page-link">Drawing & Illustration</Link></li> */}
                 <li><Link to="/brandingPage" className="page-link">Branding & Identity</Link></li>
             </ul>
+            <img
+                src="src/assets/Logo/menu.svg"
+                className="menu-icon"
+                alt="menu icon"
+                onClick={handleMenuClick}
+            />
+
+            {isDropdownVisible && (
+                <div className="dropdown-menu">
+                    <ul>
+                        <li><Link to="/posterPage">Poster Exploration</Link></li>
+                        <li><Link to="/brandingPage">Branding & Identity</Link></li>
+                        <li><Link to="/contact">Contact Me</Link></li>
+                    </ul>
+                </div>
+            )}
         </div>
     )
 }

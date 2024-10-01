@@ -21,7 +21,6 @@ html, body{
   cursor: pointer;
   text-decoration: none;
   color: black;
-  /* color: #F1EEED; */
   font-weight: 600;
   font-size: 45px;
   letter-spacing: -2px;
@@ -60,9 +59,67 @@ html, body{
   padding: 0;
   z-index: 1000;
 
-  transition: letter-spacing 100ms ease-in-out; /* Slightly increased duration for better visibility */
+  transition: letter-spacing 100ms ease-in-out;
 }
 
 .page-link:hover {
   letter-spacing: -0.7px;
+}
+
+.menu-icon{
+  display: none;
+}
+
+.dropdown-menu{
+  display: none;
+}
+
+@media (max-width: 950px){
+  .navbar{
+    justify-content: space-between;
+    margin: 0px 35px 0px 35px;
+  }
+
+  .navbar-logo{
+    font-size: 35px;
+  }
+
+  .page-links{
+    display: none;
+  }
+
+  .menu-icon{
+    cursor: pointer;
+    display: block;
+    width: 30px;
+    z-index: 1100;
+  }
+  
+  .dropdown-menu{
+    font-family: 'Apple Garamond', sans-serif;
+    display: flex;
+    align-items: end;
+    position: absolute;
+    top: 60px;
+    right: 0px;
+    text-align: end;
+  }
+
+  .dropdown-menu ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: end;
+  }
+
+  .dropdown-menu ul li{
+    padding-top: 10px;
+  }
+
+  .dropdown-menu ul li a{
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+    text-align: end;
+  }
 }
