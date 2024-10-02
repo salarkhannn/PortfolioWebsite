@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+import hamburgerMenuIcon from '../src/assets/Logo/menu.svg';
+
 export default function Navbar(){
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
 
@@ -17,7 +19,7 @@ export default function Navbar(){
                 <li><Link to="/brandingPage" className="page-link">Branding & Identity</Link></li>
             </ul>
             <img
-                src="src/assets/Logo/menu.svg"
+                src={hamburgerMenuIcon}
                 className="menu-icon"
                 alt="menu icon"
                 onClick={handleMenuClick}
