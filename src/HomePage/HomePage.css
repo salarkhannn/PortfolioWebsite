@@ -143,4 +143,8 @@ html, body{
     .contact-button {
         display: none;
     }
+
+    #circle{
+        display: none;
+    }
 }
