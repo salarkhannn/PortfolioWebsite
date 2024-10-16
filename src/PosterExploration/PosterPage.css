@@ -126,6 +126,10 @@
     background-color: #F1EEED;
 }
 
+.mobile-column{
+    display: none;
+}
+
 @media (max-width: 950px){
     .heading{
         text-align: center;
