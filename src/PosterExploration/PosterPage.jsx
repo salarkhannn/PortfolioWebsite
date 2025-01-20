@@ -10,12 +10,13 @@ import poster7 from '../assets/Posters/HarryAndHisHorse.jpg';
 import poster8 from '../assets/Posters/kimYejiposter.jpg';
 import poster9 from '../assets/Posters/MuhammadAliPoster.jpg';
 import poster10 from '../assets/Posters/TheGirlWithAPearlEaring.jpg';
+import poster11 from '../assets/Posters/tyler.jpg';
 
 import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const posters = [poster1, poster4, poster7, poster10];
-const posters2 = [poster2, poster5, poster8];
+const posters2 = [poster2, poster11, poster8, poster5];
 const posters3 = [poster3, poster6, poster9];
 const posters4 = [poster1, poster2, poster3, poster4, poster5, poster6, poster7, poster8, poster9, poster10];
 
@@ -106,15 +107,15 @@ export default function PosterPage() {
         </div>
 
         <div className='mobile-poster-column'>
-        <div className="mobile-column">
-            {imgsLoaded ? (
-              POSTERS4.map((image) => (
-                <img className="poster" key={image.id} src={image.url} alt={`Poster ${image.id + 1}`} />
-              ))
-            ) : (
-              <h1>Loading images...</h1>
-            )}
-          </div>
+          <div className="mobile-column">
+              {imgsLoaded ? (
+                POSTERS4.map((image) => (
+                  <img className="poster" key={image.id} src={image.url} alt={`Poster ${image.id + 1}`} />
+                ))
+              ) : (
+                <h1>Loading images...</h1>
+              )}
+            </div>
         </div>
       </div>
     </div>
