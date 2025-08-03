@@ -47,6 +47,19 @@ export default {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Portfolio specific colors from Figma
+        portfolio: {
+          cream: "#FFFDFA",
+          "cream-bg": "#FAF9F7",
+          dark: "#383735",
+          "dark-border": "#3D3D3D",
+          blue: "#1F66FF",
+          "blue-light": "#4D85FF",
+          "text-primary": "#030303",
+          "text-secondary": "#6C6E74",
+          "orange-light": "#FFBD59",
+          purple: "#B700FF",
+        },
         sidebar: {
           DEFAULT: "hsl(var(--sidebar-background))",
           foreground: "hsl(var(--sidebar-foreground))",
