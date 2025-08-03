@@ -64,12 +64,12 @@ export default function Process() {
         </div>
 
         {/* Bento Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-16">
           {processSteps.map((step) => (
             <div
               key={step.id}
               className={`
-                bg-white rounded-3xl p-8 border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all duration-300 group
+                bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all duration-300 group
                 ${step.size === 'large' ? 'md:col-span-2' : ''}
                 ${step.size === 'small' ? 'lg:col-span-1' : ''}
                 ${step.size === 'medium' ? 'lg:col-span-1' : ''}
@@ -88,10 +88,10 @@ export default function Process() {
               </div>
 
               {/* Content */}
-              <h3 className="text-xl md:text-2xl font-serif font-normal text-portfolio-text-primary mb-4 group-hover:text-portfolio-blue transition-colors">
+              <h3 className="text-lg md:text-xl lg:text-2xl font-serif font-normal text-portfolio-text-primary mb-3 md:mb-4 group-hover:text-portfolio-blue transition-colors">
                 {step.title}
               </h3>
-              <p className="text-portfolio-text-secondary mb-6 leading-relaxed">
+              <p className="text-sm md:text-base text-portfolio-text-secondary mb-4 md:mb-6 leading-relaxed">
                 {step.description}
               </p>
 
