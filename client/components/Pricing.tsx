@@ -10,10 +10,10 @@ const pricingPlans = [
       "Contact form integration",
       "Google Analytics setup",
       "1 revision round",
-      "2-week delivery"
+      "2-week delivery",
     ],
     popular: false,
-    ctaText: "Book a call"
+    ctaText: "Book a call",
   },
   {
     id: 2,
@@ -28,10 +28,10 @@ const pricingPlans = [
       "Usability testing",
       "Developer handoff",
       "3 revision rounds",
-      "4-week delivery"
+      "4-week delivery",
     ],
     popular: true,
-    ctaText: "Book a call"
+    ctaText: "Book a call",
   },
   {
     id: 3,
@@ -46,11 +46,11 @@ const pricingPlans = [
       "Testing & deployment",
       "Ongoing maintenance",
       "Unlimited revisions",
-      "Timeline varies"
+      "Timeline varies",
     ],
     popular: false,
-    ctaText: "Book a call"
-  }
+    ctaText: "Book a call",
+  },
 ];
 
 export default function Pricing() {
@@ -62,16 +62,26 @@ export default function Pricing() {
           <div className="inline-flex items-center bg-gray-50 rounded-xl px-4 py-2 mb-6">
             <div className="w-4 h-4 mr-2">
               <svg viewBox="0 0 16 16" fill="none" className="w-full h-full">
-                <path d="M2 4h12l-1 8H3L2 4zM2 4L1 2H0M6 12a1 1 0 102 0 1 1 0 00-2 0zM11 12a1 1 0 102 0 1 1 0 00-2 0z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" className="text-gray-600"/>
+                <path
+                  d="M2 4h12l-1 8H3L2 4zM2 4L1 2H0M6 12a1 1 0 102 0 1 1 0 00-2 0zM11 12a1 1 0 102 0 1 1 0 00-2 0z"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  className="text-gray-600"
+                />
               </svg>
             </div>
-            <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">PRICING</span>
+            <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">
+              PRICING
+            </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-normal text-portfolio-text-primary mb-6 leading-tight">
             Simple, Transparent Pricing
           </h2>
           <p className="text-lg text-portfolio-text-secondary max-w-2xl mx-auto">
-            Choose the perfect package for your project. All prices include consultation, development, and support.
+            Choose the perfect package for your project. All prices include
+            consultation, development, and support.
           </p>
         </div>
 
@@ -82,7 +92,7 @@ export default function Pricing() {
               key={plan.id}
               className={`
                 relative bg-white rounded-3xl p-8 border transition-all duration-300 hover:shadow-xl
-                ${plan.popular ? 'border-portfolio-blue shadow-lg scale-105' : 'border-gray-200 hover:border-gray-300'}
+                ${plan.popular ? "border-portfolio-blue shadow-lg scale-105" : "border-gray-200 hover:border-gray-300"}
               `}
             >
               {/* Popular Badge */}
@@ -122,8 +132,18 @@ export default function Pricing() {
                 {plan.features.map((feature, index) => (
                   <div key={index} className="flex items-start">
                     <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5 mr-3">
-                      <svg className="w-3 h-3 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                      <svg
+                        className="w-3 h-3 text-green-600"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M5 13l4 4L19 7"
+                        />
                       </svg>
                     </div>
                     <span className="text-portfolio-text-secondary text-sm leading-relaxed">
@@ -137,9 +157,10 @@ export default function Pricing() {
               <button
                 className={`
                   w-full py-4 px-6 rounded-2xl font-medium transition-all duration-200
-                  ${plan.popular
-                    ? 'bg-portfolio-blue text-white hover:bg-blue-700 shadow-md hover:shadow-lg'
-                    : 'bg-gray-100 text-portfolio-text-primary hover:bg-gray-200'
+                  ${
+                    plan.popular
+                      ? "bg-portfolio-blue text-white hover:bg-blue-700 shadow-md hover:shadow-lg"
+                      : "bg-gray-100 text-portfolio-text-primary hover:bg-gray-200"
                   }
                 `}
               >
@@ -160,19 +181,40 @@ export default function Pricing() {
             Need Something Different?
           </h3>
           <p className="text-portfolio-text-secondary mb-6 max-w-2xl mx-auto">
-            Every project is unique. If you have specific requirements or need a custom solution, 
-            let's discuss your needs and create a tailored proposal.
+            Every project is unique. If you have specific requirements or need a
+            custom solution, let's discuss your needs and create a tailored
+            proposal.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
             <button className="inline-flex items-center bg-portfolio-text-primary text-white px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors">
-              <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+              <svg
+                className="w-4 h-4 mr-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
               </svg>
               Custom Quote
             </button>
             <div className="flex items-center text-sm text-portfolio-text-secondary">
-              <svg className="w-4 h-4 mr-2 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+              <svg
+                className="w-4 h-4 mr-2 text-green-600"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M5 13l4 4L19 7"
+                />
               </svg>
               Free consultation included
             </div>

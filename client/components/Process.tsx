@@ -2,15 +2,22 @@ const processSteps = [
   {
     id: 1,
     title: "Discovery & Planning",
-    description: "We start by understanding your goals, analyzing requirements, and creating a detailed project roadmap.",
+    description:
+      "We start by understanding your goals, analyzing requirements, and creating a detailed project roadmap.",
     icon: "🔍",
-    features: ["Requirements analysis", "User research", "Technical planning", "Timeline creation"],
+    features: [
+      "Requirements analysis",
+      "User research",
+      "Technical planning",
+      "Timeline creation",
+    ],
     size: "large",
   },
   {
     id: 2,
     title: "Design & Prototyping",
-    description: "Create intuitive user experiences with modern design principles and interactive prototypes.",
+    description:
+      "Create intuitive user experiences with modern design principles and interactive prototypes.",
     icon: "🎨",
     features: ["UI/UX Design", "Wireframing", "Prototyping", "Design systems"],
     size: "medium",
@@ -18,25 +25,43 @@ const processSteps = [
   {
     id: 3,
     title: "Development",
-    description: "Build robust, scalable solutions using the latest technologies and best practices.",
+    description:
+      "Build robust, scalable solutions using the latest technologies and best practices.",
     icon: "⚡",
-    features: ["Frontend development", "Backend development", "Database design", "API integration"],
+    features: [
+      "Frontend development",
+      "Backend development",
+      "Database design",
+      "API integration",
+    ],
     size: "medium",
   },
   {
     id: 4,
     title: "Testing & Deployment",
-    description: "Ensure quality through comprehensive testing and smooth deployment to production.",
+    description:
+      "Ensure quality through comprehensive testing and smooth deployment to production.",
     icon: "🚀",
-    features: ["Quality assurance", "Performance testing", "Deployment", "Monitoring"],
+    features: [
+      "Quality assurance",
+      "Performance testing",
+      "Deployment",
+      "Monitoring",
+    ],
     size: "large",
   },
   {
     id: 5,
     title: "Maintenance & Support",
-    description: "Ongoing support and maintenance to keep your project running smoothly.",
+    description:
+      "Ongoing support and maintenance to keep your project running smoothly.",
     icon: "🛠️",
-    features: ["Bug fixes", "Updates", "Performance optimization", "Technical support"],
+    features: [
+      "Bug fixes",
+      "Updates",
+      "Performance optimization",
+      "Technical support",
+    ],
     size: "small",
   },
 ];
@@ -50,16 +75,25 @@ export default function Process() {
           <div className="inline-flex items-center bg-white rounded-xl px-4 py-2 mb-6 shadow-sm">
             <div className="w-4 h-4 mr-2">
               <svg viewBox="0 0 16 16" fill="none" className="w-full h-full">
-                <path d="M8 14A6 6 0 108 2a6 6 0 000 12zM8 4v8M4 8h8" stroke="currentColor" strokeWidth="2" strokeLinecap="round" className="text-gray-600"/>
+                <path
+                  d="M8 14A6 6 0 108 2a6 6 0 000 12zM8 4v8M4 8h8"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  className="text-gray-600"
+                />
               </svg>
             </div>
-            <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">PROCESS</span>
+            <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">
+              PROCESS
+            </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-normal text-portfolio-text-primary mb-6 leading-tight">
             How I Work With You
           </h2>
           <p className="text-lg text-portfolio-text-secondary max-w-2xl mx-auto">
-            A proven development process that ensures quality results and seamless collaboration from start to finish.
+            A proven development process that ensures quality results and
+            seamless collaboration from start to finish.
           </p>
         </div>
 
@@ -70,9 +104,9 @@ export default function Process() {
               key={step.id}
               className={`
                 bg-white rounded-2xl md:rounded-3xl p-6 md:p-8 border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all duration-300 group
-                ${step.size === 'large' ? 'md:col-span-2' : ''}
-                ${step.size === 'small' ? 'lg:col-span-1' : ''}
-                ${step.size === 'medium' ? 'lg:col-span-1' : ''}
+                ${step.size === "large" ? "md:col-span-2" : ""}
+                ${step.size === "small" ? "lg:col-span-1" : ""}
+                ${step.size === "medium" ? "lg:col-span-1" : ""}
               `}
             >
               {/* Step Number & Icon */}
@@ -100,13 +134,15 @@ export default function Process() {
                 {step.features.map((feature, index) => (
                   <div key={index} className="flex items-center text-sm">
                     <div className="w-1.5 h-1.5 bg-portfolio-blue rounded-full mr-3"></div>
-                    <span className="text-portfolio-text-secondary">{feature}</span>
+                    <span className="text-portfolio-text-secondary">
+                      {feature}
+                    </span>
                   </div>
                 ))}
               </div>
 
               {/* Background decoration for larger cards */}
-              {step.size === 'large' && (
+              {step.size === "large" && (
                 <div className="absolute top-8 right-8 w-24 h-24 bg-gradient-to-br from-portfolio-blue/5 to-purple-500/5 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               )}
             </div>
@@ -119,12 +155,22 @@ export default function Process() {
             Ready to Start Your Project?
           </h3>
           <p className="text-portfolio-text-secondary mb-8 max-w-2xl mx-auto">
-            Let's discuss your requirements and create something amazing together. 
-            Book a free consultation to get started.
+            Let's discuss your requirements and create something amazing
+            together. Book a free consultation to get started.
           </p>
           <button className="inline-flex items-center bg-portfolio-text-primary text-white px-8 py-4 rounded-2xl font-medium hover:bg-gray-800 transition-colors">
-            <svg className="w-5 h-5 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+            <svg
+              className="w-5 h-5 mr-3"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+              />
             </svg>
             Book a call
           </button>

@@ -4,18 +4,22 @@ const projects = [
   {
     id: 1,
     title: "E-commerce Platform",
-    description: "Modern e-commerce solution with React, Node.js, and Stripe integration",
+    description:
+      "Modern e-commerce solution with React, Node.js, and Stripe integration",
     tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    image: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
     category: "Full Stack",
     year: "2024",
   },
   {
     id: 2,
     title: "AI Dashboard",
-    description: "Data visualization dashboard with real-time analytics and AI insights",
+    description:
+      "Data visualization dashboard with real-time analytics and AI insights",
     tech: ["Next.js", "TypeScript", "D3.js", "Python"],
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
     category: "Frontend",
     year: "2024",
   },
@@ -24,7 +28,8 @@ const projects = [
     title: "Mobile Banking App",
     description: "Secure banking application with biometric authentication",
     tech: ["React Native", "Firebase", "Node.js"],
-    image: "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
     category: "Mobile",
     year: "2023",
   },
@@ -33,7 +38,8 @@ const projects = [
     title: "SaaS Platform",
     description: "Multi-tenant SaaS platform with subscription management",
     tech: ["Vue.js", "Laravel", "PostgreSQL"],
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
+    image:
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
     category: "Full Stack",
     year: "2023",
   },
@@ -48,16 +54,23 @@ export default function Work() {
           <div className="inline-flex items-center bg-gray-50 rounded-xl px-4 py-2 mb-6">
             <div className="w-4 h-4 mr-2">
               <svg viewBox="0 0 16 16" fill="none" className="w-full h-full">
-                <path d="M8 1L10.5 6H15L11.5 9.5L13 15L8 12L3 15L4.5 9.5L1 6H5.5L8 1Z" fill="currentColor" className="text-gray-600"/>
+                <path
+                  d="M8 1L10.5 6H15L11.5 9.5L13 15L8 12L3 15L4.5 9.5L1 6H5.5L8 1Z"
+                  fill="currentColor"
+                  className="text-gray-600"
+                />
               </svg>
             </div>
-            <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">PORTFOLIO</span>
+            <span className="text-sm font-medium text-gray-600 uppercase tracking-wide">
+              PORTFOLIO
+            </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-normal text-portfolio-text-primary mb-6 leading-tight">
             Featured Work & Projects
           </h2>
           <p className="text-lg text-portfolio-text-secondary max-w-2xl mx-auto">
-            Explore my latest projects showcasing modern development practices and innovative design solutions.
+            Explore my latest projects showcasing modern development practices
+            and innovative design solutions.
           </p>
         </div>
 
@@ -108,8 +121,18 @@ export default function Work() {
                 {/* View Project Link */}
                 <div className="flex items-center text-portfolio-blue font-medium group-hover:translate-x-1 transition-transform">
                   <span>View Project</span>
-                  <svg className="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                  <svg
+                    className="w-4 h-4 ml-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M17 8l4 4m0 0l-4 4m4-4H3"
+                    />
                   </svg>
                 </div>
               </div>
@@ -124,8 +147,18 @@ export default function Work() {
             className="inline-flex items-center bg-portfolio-text-primary text-white px-8 py-4 rounded-2xl font-medium hover:bg-gray-800 transition-colors"
           >
             View All Projects
-            <svg className="w-5 h-5 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            <svg
+              className="w-5 h-5 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M17 8l4 4m0 0l-4 4m4-4H3"
+              />
             </svg>
           </Link>
         </div>
