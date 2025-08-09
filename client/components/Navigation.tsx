@@ -10,7 +10,24 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center items-center py-4 px-4 bg-transparent">
-      <div className="flex items-center justify-between w-full max-w-4xl bg-[#383735] backdrop-blur-sm rounded-2xl border border-[#3D3D3D] px-4 py-3 shadow-xl">
+      <div 
+        className="flex items-center justify-between w-full max-w-4xl bg-[#383735] backdrop-blur-sm rounded-2xl border border-[#3D3D3D] px-4 py-3"
+        style={{
+          boxShadow: `
+            0px 0.7961919903755188px 0.7961919903755188px -0.9375px rgba(0,0,0,0.02),
+            0px 2.4145100116729736px 2.4145100116729736px -1.875px rgba(0,0,0,0.02),
+            0px 6.382649898529053px 6.382649898529053px -2.8125px rgba(0,0,0,0.02),
+            0px 20px 20px -3.75px rgba(0,0,0,0.01),
+            0px 0.7226250171661377px 0.7226250171661377px -1px rgba(0,0,0,0.09),
+            0px 2.7462399005889893px 2.7462399005889893px -2px rgba(0,0,0,0.08),
+            0px 12px 12px -3px rgba(0,0,0,0.06),
+            inset 0px -0.7961919903755188px 2.0701000690460205px -1.25px rgba(255,255,255,0.53),
+            inset 0px -2.4145100116729736px 6.277719974517822px -2.5px rgba(255,255,255,0.48),
+            inset 0px -6.382649898529053px 16.594900131225586px -3.75px rgba(255,255,255,0.37),
+            inset 0px -20px 52px -5px rgba(255,255,255,0)
+          `
+        }}
+      >
         {/* Background overlay effect */}
         <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/5 to-transparent opacity-12 mix-blend-overlay rounded-2xl pointer-events-none"></div>
 
@@ -71,7 +88,19 @@ export default function Navigation() {
           </button>
 
           {/* Get template button */}
-          <button className="bg-[#4D4D4D] hover:bg-[#5D5D5D] text-white/90 hover:text-white px-3 py-2 rounded-xl text-sm font-normal transition-all duration-200 border border-[#454545] flex items-center space-x-2 group">
+          <button 
+            className="bg-[#4D4D4D] hover:bg-[#5D5D5D] text-white/90 hover:text-white px-3 py-2 rounded-xl text-sm font-normal transition-all duration-200 border border-[#454545] flex items-center space-x-2 group"
+            style={{
+              boxShadow: `
+                inset 0px 0.7226250171661377px 0.7226250171661377px -1.25px rgba(0,0,0,0.47),
+                inset 0px 2.7462399005889893px 2.7462399005889893px -2.5px rgba(0,0,0,0.41),
+                inset 0px 12px 12px -3.75px rgba(0,0,0,0.16),
+                0px 0.7226250171661377px 0.7226250171661377px -1.25px rgba(0,0,0,0.16),
+                0px 2.7462399005889893px 2.7462399005889893px -2.5px rgba(0,0,0,0.14),
+                0px 12px 12px -3.75px rgba(0,0,0,0.05)
+              `
+            }}
+          >
             <span>Book a call</span>
             <span className="text-[#9C9C9C] group-hover:text-white/70 text-xs">
               - Free
