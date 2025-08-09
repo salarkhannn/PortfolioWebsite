@@ -9,8 +9,21 @@ export default function Hero() {
 
       <div className="relative max-w-6xl mx-auto text-center">
         {/* Coming Soon Badge */}
-        <div className="inline-flex items-center bg-portfolio-blue rounded-xl px-1 py-1 mb-8 shadow-lg">
-          <div className="bg-portfolio-blue-light text-white text-xs font-medium px-3 py-2 rounded-lg mr-2">
+        <div 
+          className="inline-flex items-center bg-green-600 rounded-xl px-1 py-1 mb-8 border-2 border-green-300/60"
+          style={{
+            boxShadow: `
+              0px 0.6021869778633118px 0.6021869778633118px -1.25px rgba(0,0,0,0.25),
+              0px 2.288530111312866px 2.288530111312866px -2.5px rgba(0,0,0,0.22),
+              0px 10px 10px -3.75px rgba(0,0,0,0.09),
+              inset 0px -0.5573340058326721px 0.27866700291633606px -0.1875px rgba(0,100,0,0.08),
+              inset 0px -1.6901500225067139px 0.8450769782066345px -0.375px rgba(0,100,0,0.1),
+              inset 0px -4.467860221862793px 2.2339301109313965px -0.5625px rgba(0,100,0,0.17),
+              inset 0px -14px 7px -0.75px rgba(0,100,0,0.37)
+            `
+          }}
+        >
+          <div className="bg-green-500 text-white text-xs font-medium px-3 py-2 rounded-lg mr-2 opacity-85">
             Available now
           </div>
           <span className="text-white text-xs font-medium pr-4">
