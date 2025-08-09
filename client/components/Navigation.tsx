@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import { BookingButton } from "./BookingButton";
 
 export default function Navigation() {
   const scrollToSection = (sectionId: string) => {
@@ -66,8 +67,11 @@ export default function Navigation() {
           {/* Separator line */}
           <div className="w-px h-7 bg-[#4D4D4D]"></div>
 
-          <button 
-            className="bg-[#4D4D4D] hover:bg-[#5D5D5D] text-white/90 hover:text-white px-3 py-2 rounded-xl text-sm font-normal transition-all duration-200 border border-[#454545] flex items-center space-x-2 group"
+          <BookingButton
+            bookingType="consultation"
+            variant="ghost"
+            size="sm"
+            className="bg-[#4D4D4D] hover:bg-[#5D5D5D] text-white/90 hover:text-white px-3 py-2 rounded-xl text-sm font-normal border border-[#454545] space-x-2 group"
             style={{
               boxShadow: `
                 inset 0px 0.7226250171661377px 0.7226250171661377px -1.25px rgba(0,0,0,0.47),
@@ -80,9 +84,6 @@ export default function Navigation() {
             }}
           >
             <span>Book a call</span>
-            <span className="text-[#9C9C9C] group-hover:text-white/70 text-xs">
-              - Free
-            </span>
             <svg
               className="w-4 h-4 ml-1"
               fill="none"
@@ -96,7 +97,7 @@ export default function Navigation() {
                 d="M17 8l4 4m0 0l-4 4m4-4H3"
               />
             </svg>
-          </button>
+          </BookingButton>
         </div>
       </div>
     </nav>

@@ -1,3 +1,5 @@
+import { BookingButton } from "./BookingButton";
+
 export default function Hero() {
   return (
     <section className="relative min-h-screen bg-portfolio-cream flex items-center justify-center px-4 pt-20 md:pt-28">
@@ -55,7 +57,11 @@ export default function Hero() {
 
         {/* CTA Section */}
         <div className="flex flex-col items-center space-y-4 md:space-y-6">
-          <button className="inline-flex items-center bg-black text-white px-6 md:px-8 py-3 md:py-4 rounded-2xl text-base md:text-lg font-medium shadow-lg hover:shadow-xl transition-all duration-200 group">
+          <BookingButton
+            bookingType="consultation"
+            size="lg"
+            className="shadow-lg hover:shadow-xl group"
+          >
             <svg
               className="w-5 h-5 mr-3"
               fill="none"
@@ -71,7 +77,7 @@ export default function Hero() {
             </svg>
             Book a call
             <div className="ml-3 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
-          </button>
+          </BookingButton>
         </div>
       </div>
     </section>

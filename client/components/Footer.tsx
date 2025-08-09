@@ -1,3 +1,5 @@
+import { BookingButton } from "./BookingButton";
+
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
@@ -45,7 +47,12 @@ export default function Footer() {
             </p>
 
             {/* CTA Button */}
-            <button className="inline-flex items-center bg-white text-black px-8 py-4 rounded-2xl font-medium shadow-lg hover:shadow-xl transition-all duration-200 group mb-16">
+            <BookingButton
+              bookingType="project-discussion"
+              variant="secondary"
+              size="lg"
+              className="bg-white text-black shadow-lg hover:shadow-xl group mb-16"
+            >
               <svg
                 className="w-5 h-5 mr-3"
                 fill="none"
@@ -60,7 +67,7 @@ export default function Footer() {
                 />
               </svg>
               Book a call
-            </button>
+            </BookingButton>
           </div>
         </div>
 
