@@ -49,19 +49,13 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Center Navigation */}
-        <div className="hidden md:flex items-center space-x-5">
+        {/* Right Side */}
+        <div className="flex items-center space-x-3">
           <button
             onClick={() => scrollToSection("work")}
             className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
           >
-            Features
-          </button>
-          <button
-            onClick={() => scrollToSection("process")}
-            className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
-          >
-            Testimonials
+            Work
           </button>
           <button
             onClick={() => scrollToSection("pricing")}
@@ -69,25 +63,9 @@ export default function Navigation() {
           >
             Pricing
           </button>
-          <Link
-            to="/blog"
-            className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
-          >
-            Blog
-          </Link>
-        </div>
-
-        {/* Right Side */}
-        <div className="flex items-center space-x-3">
           {/* Separator line */}
           <div className="w-px h-7 bg-[#4D4D4D]"></div>
 
-          {/* Waitlist button */}
-          <button className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight">
-            Portfolio
-          </button>
-
-          {/* Get template button */}
           <button 
             className="bg-[#4D4D4D] hover:bg-[#5D5D5D] text-white/90 hover:text-white px-3 py-2 rounded-xl text-sm font-normal transition-all duration-200 border border-[#454545] flex items-center space-x-2 group"
             style={{
