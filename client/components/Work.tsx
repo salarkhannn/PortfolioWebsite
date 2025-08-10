@@ -80,7 +80,7 @@ export default function Work() {
             <Link
               key={project.id}
               to={`/project/${project.id}`}
-              className="group bg-white rounded-3xl overflow-hidden shadow-sm border border-gray-200 hover:shadow-xl hover:border-gray-300 transition-all duration-300"
+              className="group bg-white rounded-3xl overflow-hidden shadow-sm border-4 border-gray-100 hover:shadow-md transition-all duration-100"
             >
               {/* Project Image */}
               <div className="relative overflow-hidden">
