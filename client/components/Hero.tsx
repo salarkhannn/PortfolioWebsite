@@ -9,9 +9,8 @@ export default function Hero() {
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[1060px] h-[62px] bg-portfolio-purple opacity-20 blur-[12px] rounded-full mt-10"></div>
       </div>
 
-      <div className="relative max-w-6xl mx-auto text-center">
-        {/* Coming Soon Badge */}
-        <div 
+      <div className="relative max-w-6xl mx-auto md:text-center">
+        <div
           className="inline-flex items-center bg-green-600 rounded-xl px-1 py-1 mb-8 border-2 border-green-300/60"
           style={{
             boxShadow: `
@@ -35,7 +34,7 @@ export default function Hero() {
 
         {/* Main Headline */}
         <div className="space-y-2 md:space-y-4 mb-6 md:mb-8">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-normal text-portfolio-text-primary leading-tight tracking-tight">
+          <h1 className="text-4xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-serif font-normal text-portfolio-text-primary leading-tight tracking-tighter text-left md:text-center">
             <span className="block">Transforming Ideas into Beautiful,</span>
             <span className="block">
               <span className="relative inline-block">
@@ -50,13 +49,13 @@ export default function Hero() {
         </div>
 
         {/* Subtitle */}
-        <p className="text-base md:text-lg lg:text-xl text-portfolio-text-secondary max-w-2xl mx-auto mb-6 md:mb-8 leading-relaxed px-4">
+        <p className="text-base md:text-lg lg:text-xl text-portfolio-text-secondary max-w-2xl md:mx-auto mb-6 md:mb-8 leading-relaxed px-4 text-left md:text-center">
           Transform your ideas into beautiful, functional products with expert
           development and design services.
         </p>
 
         {/* CTA Section */}
-        <div className="flex flex-col items-center space-y-4 md:space-y-6">
+        <div className="flex flex-col items-start md:items-center space-y-4 md:space-y-6">
           <BookingButton
             bookingType="consultation"
             size="lg"

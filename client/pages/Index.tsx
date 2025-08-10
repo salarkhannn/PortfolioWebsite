@@ -1,7 +1,7 @@
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Work from "@/components/Work";
-import Process from "@/components/Process";
+import Services from "@/components/Services";
 import Pricing from "@/components/Pricing";
 import Footer from "@/components/Footer";
 
@@ -12,7 +12,7 @@ export default function Index() {
       <main>
         <Hero />
         <Work />
-        <Process />
+        <Services />
         <Pricing />
       </main>
       <Footer />

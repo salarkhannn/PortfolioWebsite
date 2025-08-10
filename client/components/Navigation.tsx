@@ -1,18 +1,22 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BookingButton } from "./BookingButton";
 
 export default function Navigation() {
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
     }
+    setIsMobileMenuOpen(false); // Close mobile menu on link click
   };
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center items-center py-4 px-4 bg-transparent">
       <div 
-        className="flex items-center justify-between w-full max-w-4xl bg-[#383735] backdrop-blur-sm rounded-2xl border border-[#3D3D3D] px-4 py-3"
+        className="relative flex items-center justify-between w-full max-w-4xl bg-[#383735] backdrop-blur-sm rounded-2xl border border-[#3D3D3D] px-4 py-3"
         style={{
           boxShadow: `
             0px 0.7961919903755188px 0.7961919903755188px -0.9375px rgba(0,0,0,0.02),
@@ -50,8 +54,8 @@ export default function Navigation() {
           </div>
         </div>
 
-        {/* Right Side */}
-        <div className="flex items-center space-x-3">
+        {/* Centered Nav Links (Desktop) */}
+        <div className="hidden md:flex items-center space-x-3 absolute left-1/2 -translate-x-1/2">
           <button
             onClick={() => scrollToSection("work")}
             className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
@@ -59,19 +63,27 @@ export default function Navigation() {
             Work
           </button>
           <button
+            onClick={() => scrollToSection("services")}
+            className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
+          >
+            Services
+          </button>
+          <button
             onClick={() => scrollToSection("pricing")}
             className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
           >
             Pricing
           </button>
-          {/* Separator line */}
-          <div className="w-px h-7 bg-[#4D4D4D]"></div>
+        </div>
 
+        {/* Right Side */}
+        <div className="flex items-center space-x-3">
+          <div className="hidden md:block w-px h-7 bg-[#4D4D4D]"></div>
           <BookingButton
             bookingType="consultation"
             variant="ghost"
             size="sm"
-            className="bg-[#4D4D4D] hover:bg-[#5D5D5D] text-white/90 hover:text-white px-3 py-2 rounded-xl text-sm font-normal border border-[#454545] space-x-2 group"
+            className="hidden md:inline-flex bg-[#4D4D4D] hover:bg-[#5D5D5D] text-white/90 hover:text-white px-3 py-2 rounded-xl text-sm font-normal border border-[#454545] space-x-2 group"
             style={{
               boxShadow: `
                 inset 0px 0.7226250171661377px 0.7226250171661377px -1.25px rgba(0,0,0,0.47),
@@ -98,8 +110,52 @@ export default function Navigation() {
               />
             </svg>
           </BookingButton>
+          
+          {/* Mobile Menu Button */}
+          <button 
+            className="md:hidden text-white/90"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d={isMobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+            </svg>
+          </button>
         </div>
       </div>
+
+      {/* Mobile Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-full left-0 right-0 bg-[#282725] rounded-b-2xl border border-t-0 border-[#3D3D3D] mx-4">
+          <div className="flex flex-col items-center space-y-4 py-4">
+            <button
+              onClick={() => scrollToSection("work")}
+              className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
+            >
+              Work
+            </button>
+            <button
+              onClick={() => scrollToSection("services")}
+              className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
+            >
+              Services
+            </button>
+            <button
+              onClick={() => scrollToSection("pricing")}
+              className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
+            >
+              Pricing
+            </button>
+            <BookingButton
+              bookingType="consultation"
+              variant="ghost"
+              size="sm"
+              className="bg-[#4D4D4D] hover:bg-[#5D5D5D] text-white/90 hover:text-white px-3 py-2 rounded-xl text-sm font-normal border border-[#454545] space-x-2 group"
+            >
+              <span>Book a call</span>
+            </BookingButton>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }
