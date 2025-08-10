@@ -1,13 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
-  /**
-   * Tailwind CSS theme
-   * tailwind.config.ts expects the following color variables to be expressed as HSL values.
-   * A different format will require also updating the theme in tailwind.config.ts.
-  */
   :root {
     --background: 0 0% 100%;
     --foreground: 222.2 84% 4.9%;
@@ -103,4 +100,60 @@
   body {
     @apply bg-background text-foreground;
   }
+}
+
+@font-face {
+  font-family: 'LibreCaslonCondensed';
+  src: url('../src/assets/Fonts/LibreCaslonCondensed-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LibreCaslonCondensed';
+  src: url('../src/assets/Fonts/LibreCaslonCondensed-Bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LibreCaslonCondensed';
+  src: url('../src/assets/Fonts/LibreCaslonCondensed-Italic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'LibreCaslonCondensed';
+  src: url('../src/assets/Fonts/LibreCaslonCondensed-BoldItalic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'LibreCaslonCondensed';
+  src: url('../src/assets/Fonts/LibreCaslonCondensed-Medium.ttf') format('truetype');
+  font-weight: 500; /* Medium weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LibreCaslonCondensed';
+  src: url('../src/assets/Fonts/LibreCaslonCondensed-MediumItalic.ttf') format('truetype');
+  font-weight: 500; /* Medium weight */
+  font-style: italic;
+}
+
+@font-face {
+  font-family: 'LibreCaslonCondensed';
+  src: url('../src/assets/Fonts/LibreCaslonCondensed-SemiBold.ttf') format('truetype');
+  font-weight: 600; /* SemiBold weight */
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'LibreCaslonCondensed';
+  src: url('../src/assets/Fonts/LibreCaslonCondensed-SemiBoldItalic.ttf') format('truetype');
+  font-weight: 600; /* SemiBold weight */
+  font-style: italic;
 }
