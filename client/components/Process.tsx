@@ -1,3 +1,5 @@
+import { BookingButton } from "./BookingButton";
+
 const processSteps = [
   {
     id: 1,
@@ -158,7 +160,23 @@ export default function Process() {
             Let's discuss your requirements and create something amazing
             together. Book a free consultation to get started.
           </p>
-          <button className="inline-flex items-center bg-portfolio-text-primary text-white px-8 py-4 rounded-2xl font-medium hover:bg-gray-800 transition-colors">
+          <BookingButton
+            bookingType="consultation"
+            size="lg"
+            className="bg-[#0D0D0D] border border-[#222222] rounded-[14px] group"
+            style={{
+              boxShadow: `
+                inset 0px 0.6369529962539673px 0.6369529962539673px -0.9375px rgba(255,255,255,0.44),
+                inset 0px 1.9315999746322632px 1.9315999746322632px -1.875px rgba(255,255,255,0.42),
+                inset 0px 5.1061201095581055px 5.1061201095581055px -2.8125px rgba(255,255,255,0.35),
+                inset 0px 16px 16px -3.75px rgba(255,255,255,0.15),
+                0px 0.5573340058326721px 0.5573340058326721px -0.875px rgba(0,0,0,0.17),
+                0px 1.6901500225067139px 1.6901500225067139px -1.75px rgba(0,0,0,0.17),
+                0px 4.467860221862793px 4.467860221862793px -2.625px rgba(0,0,0,0.14),
+                0px 14px 14px -3.5px rgba(0,0,0,0.08)
+              `
+            }}
+          >
             <svg
               className="w-5 h-5 mr-3"
               fill="none"
@@ -172,8 +190,9 @@ export default function Process() {
                 d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
               />
             </svg>
-            Book a call
-          </button>
+            <span className="text-white text-[16.7px] leading-[27.9px]">Book a call</span>
+            <div className="ml-3 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
+          </BookingButton>
         </div>
       </div>
     </section>

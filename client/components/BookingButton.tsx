@@ -28,9 +28,9 @@ export const BookingButton: React.FC<BookingButtonProps> = ({
   const baseClasses = "inline-flex items-center justify-center rounded-2xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
   
   const variantClasses = {
-    primary: "bg-black text-white hover:bg-gray-800 focus:ring-gray-500",
-    secondary: "bg-white text-black border border-gray-200 hover:bg-gray-50 focus:ring-gray-500",
-    ghost: "bg-transparent text-current hover:bg-white/10 focus:ring-white/20"
+    primary: "bg-black text-white focus:ring-gray-500",
+    secondary: "bg-white text-black border border-gray-200 focus:ring-gray-500",
+    ghost: "bg-transparent text-current focus:ring-white/20"
   };
   
   const sizeClasses = {

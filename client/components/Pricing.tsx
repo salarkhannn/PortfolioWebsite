@@ -1,3 +1,5 @@
+import { BookingButton } from "./BookingButton";
+
 const pricingPlans = [
   {
     id: 1,
@@ -13,7 +15,7 @@ const pricingPlans = [
       "2-week delivery",
     ],
     popular: false,
-    ctaText: "Book a call",
+    
   },
   {
     id: 2,
@@ -31,7 +33,7 @@ const pricingPlans = [
       "4-week delivery",
     ],
     popular: true,
-    ctaText: "Book a call",
+    
   },
   {
     id: 3,
@@ -49,7 +51,7 @@ const pricingPlans = [
       "Timeline varies",
     ],
     popular: false,
-    ctaText: "Book a call",
+    
   },
 ];
 
@@ -95,15 +97,6 @@ export default function Pricing() {
                 ${plan.popular ? "border-portfolio-blue shadow-lg scale-105" : "border-gray-200 hover:border-gray-300"}
               `}
             >
-              {/* Popular Badge */}
-              {plan.popular && (
-                <div className="absolute -top-4 left-1/2 transform -translate-x-1/2">
-                  <div className="bg-portfolio-blue text-white px-4 py-2 rounded-full text-sm font-medium">
-                    Most Popular
-                  </div>
-                </div>
-              )}
-
               {/* Plan Header */}
               <div className="text-center mb-8">
                 <h3 className="text-2xl font-serif font-normal text-portfolio-text-primary mb-2">
@@ -154,18 +147,27 @@ export default function Pricing() {
               </div>
 
               {/* CTA Button */}
-              <button
-                className={`
-                  w-full py-4 px-6 rounded-2xl font-medium transition-all duration-200
-                  ${
-                    plan.popular
-                      ? "bg-portfolio-blue text-white hover:bg-blue-700 shadow-md hover:shadow-lg"
-                      : "bg-gray-100 text-portfolio-text-primary hover:bg-gray-200"
-                  }
-                `}
+              <BookingButton
+                bookingType="consultation"
+                size="lg"
+                className={`w-full ${plan.popular ? 'bg-portfolio-blue text-white hover:bg-blue-700 shadow-md hover:shadow-lg' : 'bg-gray-100 text-portfolio-text-primary hover:bg-gray-200'}`}
               >
-                {plan.ctaText}
-              </button>
+                <svg
+                  className="w-5 h-5 mr-3"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                  />
+                </svg>
+                <span className={`${plan.popular ? 'text-white' : 'text-portfolio-text-primary'} text-[16.7px] leading-[27.9px]`}>Book a call</span>
+                <div className="ml-3 w-2 h-2 bg-white/30 rounded-full animate-pulse"></div>
+              </BookingButton>
 
               {/* Background decoration for popular plan */}
               {plan.popular && (
