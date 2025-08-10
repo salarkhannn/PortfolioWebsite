@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="./src/assets/Logo/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Page Not Found - Redirecting...</title>
+  </head>
+  <body>
+    <h1>Redirecting...</h1>
+    <script type="text/javascript">
+      // Redirect any 404 error page back to the root or the specific route
+      var redirect = window.location.pathname;
+      if (!redirect.startsWith('/')) {
+        redirect = '/' + redirect;
+      }
+      window.location = '/' + redirect + '?redirected=true';
+    </script>
+  </body>
+</html>
