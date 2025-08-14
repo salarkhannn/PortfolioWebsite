@@ -4,6 +4,18 @@ import CursorChip from "./CursorChip";
 
 const projects = [
   {
+    id: "rento",
+    title: "Rento",
+    description:
+      "Seamless platform for renting and lending items with focus on frictionless UX",
+    tech: ["React Native", "UX Design", "Firebase", "Node.js"],
+    image:
+      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+    category: "Mobile App",
+    year: "2024",
+    caseStudy: "/case-study/rento",
+  },
+  {
     id: 1,
     title: "E-commerce Platform",
     description:
@@ -83,7 +95,7 @@ export default function Work() {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-normal text-portfolio-text-primary mb-6 leading-tight">
-            Featured Work & Projects
+            Featured Case Studies
           </h2>
           <p className="text-lg text-portfolio-text-secondary max-w-2xl mx-auto">
             Explore my latest projects showcasing modern development practices
@@ -96,7 +108,7 @@ export default function Work() {
           {projects.map((project) => (
             <Link
               key={project.id}
-              to={`/project/${project.id}`}
+              to={project.caseStudy || `/project/${project.id}`}
               className="group bg-white rounded-3xl overflow-hidden shadow-sm border-4 border-gray-100 transition-all duration-100 h-[480px]"
               onMouseMove={handleMouseMove}
               onMouseEnter={handleMouseEnter}
@@ -118,6 +130,14 @@ export default function Work() {
                   <p className="text-portfolio-text-secondary mb-4 leading-relaxed">
                     {project.description}
                   </p>
+                  {project.caseStudy && (
+                    <span className="inline-flex items-center text-sm font-medium text-blue-600">
+                      View Case Study
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  )}
                 </div>
               </div>
             </Link>

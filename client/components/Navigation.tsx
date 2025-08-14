@@ -63,7 +63,7 @@ export default function Navigation() {
             onClick={() => scrollToSection("work")}
             className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
           >
-            Work
+            Case Studies
           </button>
           <button
             onClick={() => scrollToSection("services")}
@@ -143,7 +143,7 @@ export default function Navigation() {
               onClick={() => scrollToSection("work")}
               className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
             >
-              Work
+              Case Studies
             </button>
             <button
               onClick={() => scrollToSection("services")}
