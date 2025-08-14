@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import CursorChip from "./CursorChip";
+// import rentoCover from "../assets/cover.png";
 
 const projects = [
   {
@@ -10,7 +11,7 @@ const projects = [
       "Seamless platform for renting and lending items with focus on frictionless UX",
     tech: ["React Native", "UX Design", "Firebase", "Node.js"],
     image:
-      "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?w=800&h=600&fit=crop",
+      "/Rento/cover.png",
     category: "Mobile App",
     year: "2024",
     caseStudy: "/case-study/rento",
@@ -104,12 +105,12 @@ export default function Work() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="flex flex-col justify-center gap-8 mb-16">
           {projects.map((project) => (
             <Link
               key={project.id}
               to={project.caseStudy || `/project/${project.id}`}
-              className="group bg-white rounded-3xl overflow-hidden shadow-sm border-4 border-gray-100 transition-all duration-100 h-[480px]"
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm border-4 border-gray-100 transition-all duration-100 h-[600px]"
               onMouseMove={handleMouseMove}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}

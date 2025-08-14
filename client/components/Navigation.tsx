@@ -19,7 +19,7 @@ export default function Navigation() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 flex justify-center items-center py-4 px-4 bg-transparent">
       <div 
-        className="relative flex items-center justify-between w-full max-w-4xl bg-[#383735] backdrop-blur-sm rounded-2xl border border-[#3D3D3D] px-4 py-3"
+        className="relative flex items-center justify-between w-full max-w-4xl bg-[#383735]/70 backdrop-blur-sm rounded-2xl border border-[#3D3D3D]/70   px-4 py-3"
         style={{
           boxShadow: `
             0px 0.7961919903755188px 0.7961919903755188px -0.9375px rgba(0,0,0,0.02),
@@ -81,12 +81,12 @@ export default function Navigation() {
 
         {/* Right Side */}
         <div className="flex items-center space-x-3">
-          <div className="hidden md:block w-px h-7 bg-[#4D4D4D]"></div>
+          <div className="hidden md:block w-px h-7 bg-[#4D4D4D]/70"></div>
           <BookingButton
             bookingType="consultation"
             variant="ghost"
             size="sm"
-            className="hidden md:inline-flex bg-[#4D4D4D] hover:bg-[#5D5D5D] text-white/90 hover:text-white px-3 py-2 rounded-xl text-sm font-normal border border-[#454545] space-x-2 group"
+            className="hidden md:inline-flex bg-[#4D4D4D]/70 hover:bg-[#5D5D5D]/70 text-white/90 hover:text-white px-3 py-2 rounded-xl text-sm font-normal border border-[#454545]/70 space-x-2 group"
             style={{
               boxShadow: `
                 inset 0px 0.7226250171661377px 0.7226250171661377px -1.25px rgba(0,0,0,0.47),
@@ -117,7 +117,7 @@ export default function Navigation() {
           {/* Logout Button */}
           <button
             onClick={logout}
-            className="hidden md:flex items-center justify-center w-8 h-8 bg-[#4D4D4D] hover:bg-red-600 text-white/70 hover:text-white rounded-lg transition-all duration-200 border border-[#454545] group"
+            className="hidden md:flex items-center justify-center w-8 h-8 bg-[#4D4D4D]/70 hover:bg-red-600 text-white/70 hover:text-white rounded-lg transition-all duration-200 border border-[#454545] group"
             title="Logout"
           >
             <LogOut className="w-4 h-4" />
