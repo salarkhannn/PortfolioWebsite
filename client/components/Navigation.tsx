@@ -1,9 +1,12 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BookingButton } from "./BookingButton";
+import { useAuth } from "@/hooks/use-auth";
+import { LogOut } from "lucide-react";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { logout } = useAuth();
 
   const scrollToSection = (sectionId: string) => {
     const element = document.getElementById(sectionId);
@@ -111,6 +114,15 @@ export default function Navigation() {
             </svg>
           </BookingButton>
           
+          {/* Logout Button */}
+          <button
+            onClick={logout}
+            className="hidden md:flex items-center justify-center w-8 h-8 bg-[#4D4D4D] hover:bg-red-600 text-white/70 hover:text-white rounded-lg transition-all duration-200 border border-[#454545] group"
+            title="Logout"
+          >
+            <LogOut className="w-4 h-4" />
+          </button>
+          
           {/* Mobile Menu Button */}
           <button 
             className="md:hidden text-white/90"
@@ -153,6 +165,15 @@ export default function Navigation() {
             >
               <span>Book a call</span>
             </BookingButton>
+            
+            {/* Mobile Logout Button */}
+            <button
+              onClick={logout}
+              className="flex items-center gap-2 text-white/70 hover:text-red-400 transition-colors text-sm font-normal tracking-tight"
+            >
+              <LogOut className="w-4 h-4" />
+              Logout
+            </button>
           </div>
         </div>
       )}
