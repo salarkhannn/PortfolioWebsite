@@ -110,31 +110,58 @@ export default function RentoCaseStudy() {
         </section>
 
         {/* Related Projects */}
-        <section className="py-16">
-          <div className="max-w-full mx-32">
+        <section className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-4">
             <div className="text-center mb-12">
               <h2 className="text-3xl font-serif font-normal text-gray-900 mb-4">Other Projects</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Explore more of my work showcasing different design approaches and technical solutions
+              </p>
             </div>
             
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="flex flex-col gap-8">
+              {/* Karakoram */}
+              <Link
+                to="/case-study/karakoram"
+                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
+              >
+                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
+                  <img
+                    src="/karakoram/1(cover).jpg"
+                    alt="Karakoram"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">Karakoram</h3>
+                  <p className="text-gray-600 mb-4">Visual storytelling project showcasing the majestic mountain range through design</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Design</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Visual Storytelling</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Photography</span>
+                  </div>
+                </div>
+              </Link>
+
               {/* E-commerce Platform */}
               <Link
                 to="/project/1"
-                className="group rounded-md overflow-hidden"
+                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
                     alt="E-commerce Platform"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-medium text-gray-900 mb-2">E-commerce Platform</h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">Modern e-commerce solution with React and Stripe integration</p>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">React</span>
-                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Node.js</span>
+                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">E-commerce Platform</h3>
+                  <p className="text-gray-600 mb-4">Modern e-commerce solution with React, Node.js, and Stripe integration</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">React</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Node.js</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Stripe</span>
                   </div>
                 </div>
               </Link>
@@ -142,21 +169,22 @@ export default function RentoCaseStudy() {
               {/* AI Dashboard */}
               <Link
                 to="/project/2"
-                className="group rounded-md overflow-hidden"
+                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
                     alt="AI Dashboard"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-medium text-gray-900 mb-2">AI Dashboard</h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">Data visualization dashboard with real-time analytics and AI insights</p>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Next.js</span>
-                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">D3.js</span>
+                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">AI Dashboard</h3>
+                  <p className="text-gray-600 mb-4">Data visualization dashboard with real-time analytics and AI insights</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Next.js</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">TypeScript</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">D3.js</span>
                   </div>
                 </div>
               </Link>
@@ -164,43 +192,22 @@ export default function RentoCaseStudy() {
               {/* Mobile Banking App */}
               <Link
                 to="/project/3"
-                className="group rounded-md overflow-hidden"
+                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
               >
-                <div className="aspect-[4/3] overflow-hidden">
+                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
                   <img
                     src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
                     alt="Mobile Banking App"
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                   />
                 </div>
-                <div className="p-4">
-                  <h3 className="font-medium text-gray-900 mb-2">Mobile Banking App</h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">Secure banking application with biometric authentication</p>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">React Native</span>
-                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Firebase</span>
-                  </div>
-                </div>
-              </Link>
-
-              {/* SaaS Platform */}
-              <Link
-                to="/project/4"
-                className="group rounded-md overflow-hidden"
-              >
-                <div className="aspect-[4/3] overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop"
-                    alt="SaaS Platform"
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                <div className="p-4">
-                  <h3 className="font-medium text-gray-900 mb-2">SaaS Platform</h3>
-                  <p className="text-sm text-gray-600 mb-3 line-clamp-2">Multi-tenant SaaS platform with subscription management</p>
-                  <div className="flex flex-wrap gap-1">
-                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Vue.js</span>
-                    <span className="text-xs bg-gray-200 text-gray-700 px-2 py-1 rounded">Laravel</span>
+                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">Mobile Banking App</h3>
+                  <p className="text-gray-600 mb-4">Secure banking application with biometric authentication</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">React Native</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Firebase</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Node.js</span>
                   </div>
                 </div>
               </Link>

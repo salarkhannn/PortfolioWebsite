@@ -17,6 +17,18 @@ const projects = [
     caseStudy: "/case-study/rento",
   },
   {
+    id: "karakoram",
+    title: "Karakoram",
+    description:
+      "Visual storytelling project showcasing the majestic mountain range through design",
+    tech: ["Design", "Visual Storytelling", "Photography"],
+    image:
+      "/karakoram/1(cover).jpg",
+    category: "Design",
+    year: "2024",
+    caseStudy: "/case-study/karakoram",
+  },
+  {
     id: 1,
     title: "E-commerce Platform",
     description:
