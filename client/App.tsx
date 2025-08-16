@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import NotFound from "./pages/NotFound";
 import RentoCaseStudy from "./pages/RentoCaseStudy";
 import KarakoramCaseStudy from "./pages/KarakoramCaseStudy";
+import ZealCaseStudy from "./pages/ZealCaseStudy";
 import PasswordUnlock from "./components/PasswordUnlock";
 import { useAuth } from "./hooks/use-auth";
 
@@ -45,6 +46,7 @@ const AuthenticatedApp = () => {
         <Route path="/blog" element={<Blog />} />
         <Route path="/case-study/rento" element={<RentoCaseStudy />} />
         <Route path="/case-study/karakoram" element={<KarakoramCaseStudy />} />
+        <Route path="/case-study/zeal" element={<ZealCaseStudy />} />
         {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
         <Route path="*" element={<NotFound />} />
       </Routes>

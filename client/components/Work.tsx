@@ -29,6 +29,18 @@ const projects = [
     caseStudy: "/case-study/karakoram",
   },
   {
+    id: "zeal",
+    title: "ZEAL",
+    description:
+      "Plant-based energy drink brand identity with bold packaging and visual design",
+    tech: ["Logo Design", "Branding", "Packaging"],
+    image:
+      "/ZEAL/1(cover).gif",
+    category: "Branding",
+    year: "2024",
+    caseStudy: "/case-study/zeal",
+  },
+  {
     id: 1,
     title: "E-commerce Platform",
     description:

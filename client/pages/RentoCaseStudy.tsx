@@ -143,6 +143,29 @@ export default function RentoCaseStudy() {
                 </div>
               </Link>
 
+              {/* ZEAL */}
+              <Link
+                to="/case-study/zeal"
+                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
+              >
+                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
+                  <img
+                    src="/ZEAL/1(cover).gif"
+                    alt="ZEAL"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">ZEAL</h3>
+                  <p className="text-gray-600 mb-4">Plant-based energy drink brand identity with bold packaging and visual design</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Logo Design</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Branding</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Packaging</span>
+                  </div>
+                </div>
+              </Link>
+
               {/* E-commerce Platform */}
               <Link
                 to="/project/1"
