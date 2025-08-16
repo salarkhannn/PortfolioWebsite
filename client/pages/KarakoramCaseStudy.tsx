@@ -70,7 +70,7 @@ export default function KarakoramCaseStudy() {
             <img 
               src={image.src} 
               alt={image.alt} 
-              className="w-full max-w-7xl h-auto object-cover"
+              className="w-full h-auto object-cover"
             />
           </section>
         ))}
@@ -148,100 +148,6 @@ export default function KarakoramCaseStudy() {
                   </div>
                 </div>
               </Link>
-
-              {/* E-commerce Platform */}
-              <Link
-                to="/project/1"
-                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
-              >
-                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop"
-                    alt="E-commerce Platform"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="md:w-2/3 p-6 flex flex-col justify-center">
-                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">E-commerce Platform</h3>
-                  <p className="text-gray-600 mb-4">Modern e-commerce solution with React, Node.js, and Stripe integration</p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">React</span>
-                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Node.js</span>
-                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Stripe</span>
-                  </div>
-                </div>
-              </Link>
-
-              {/* AI Dashboard */}
-              <Link
-                to="/project/2"
-                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
-              >
-                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop"
-                    alt="AI Dashboard"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="md:w-2/3 p-6 flex flex-col justify-center">
-                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">AI Dashboard</h3>
-                  <p className="text-gray-600 mb-4">Data visualization dashboard with real-time analytics and AI insights</p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Next.js</span>
-                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">TypeScript</span>
-                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">D3.js</span>
-                  </div>
-                </div>
-              </Link>
-
-              {/* Mobile Banking App */}
-              <Link
-                to="/project/3"
-                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
-              >
-                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop"
-                    alt="Mobile Banking App"
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
-                  />
-                </div>
-                <div className="md:w-2/3 p-6 flex flex-col justify-center">
-                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">Mobile Banking App</h3>
-                  <p className="text-gray-600 mb-4">Secure banking application with biometric authentication</p>
-                  <div className="flex flex-wrap gap-2">
-                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">React Native</span>
-                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Firebase</span>
-                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Node.js</span>
-                  </div>
-                </div>
-              </Link>
-            </div>
-          </div>
-        </section>
-
-        {/* Navigation */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-4">
-            <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
-              <Link
-                to="/"
-                className="inline-flex items-center text-gray-600 hover:text-gray-900 transition-colors"
-              >
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 19l-7-7m0 0l7-7m-7 7h18" />
-                </svg>
-                Back to Portfolio
-              </Link>
-              <div className="flex gap-4">
-                <Link
-                  to="/projects"
-                  className="bg-gray-900 text-white px-6 py-3 rounded-xl font-medium hover:bg-gray-800 transition-colors"
-                >
-                  View All Projects
-                </Link>
-              </div>
             </div>
           </div>
         </section>

@@ -1,12 +1,9 @@
 import { useState } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BookingButton } from "./BookingButton";
-import { useAuth } from "@/hooks/use-auth";
-import { LogOut } from "lucide-react";
 
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const { logout } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -60,18 +57,7 @@ export default function Navigation() {
         {/* Logo */}
         <div className="flex items-center">
           <div className="w-8 h-8 bg-portfolio-blue rounded-lg flex items-center justify-center mr-4">
-            <svg className="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none">
-              <path
-                d="M10 13a2 2 0 0 0 4 0c0-1.1-.9-2-2-2s-2 .9-2 2z"
-                fill="currentColor"
-              />
-              <path
-                d="M20 5h-3.17L15 3H9L7.17 5H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2z"
-                stroke="currentColor"
-                strokeWidth="2"
-                fill="none"
-              />
-            </svg>
+            <span className="text-white font-serif text-lg font-medium">S</span>
           </div>
         </div>
 
@@ -132,15 +118,6 @@ export default function Navigation() {
             </svg>
           </BookingButton>
           
-          {/* Logout Button */}
-          <button
-            onClick={logout}
-            className="hidden md:flex items-center justify-center w-8 h-8 bg-[#4D4D4D]/70 hover:bg-red-600 text-white/70 hover:text-white rounded-lg transition-all duration-200 border border-[#454545] group"
-            title="Logout"
-          >
-            <LogOut className="w-4 h-4" />
-          </button>
-          
           {/* Mobile Menu Button */}
           <button 
             className="md:hidden text-white/90"
@@ -183,15 +160,6 @@ export default function Navigation() {
             >
               <span>Book a call</span>
             </BookingButton>
-            
-            {/* Mobile Logout Button */}
-            <button
-              onClick={logout}
-              className="flex items-center gap-2 text-white/70 hover:text-red-400 transition-colors text-sm font-normal tracking-tight"
-            >
-              <LogOut className="w-4 h-4" />
-              Logout
-            </button>
           </div>
         </div>
       )}

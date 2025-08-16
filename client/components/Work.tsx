@@ -40,48 +40,6 @@ const projects = [
     year: "2024",
     caseStudy: "/case-study/zeal",
   },
-  {
-    id: 1,
-    title: "E-commerce Platform",
-    description:
-      "Modern e-commerce solution with React, Node.js, and Stripe integration",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
-    image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-    category: "Full Stack",
-    year: "2024",
-  },
-  {
-    id: 2,
-    title: "AI Dashboard",
-    description:
-      "Data visualization dashboard with real-time analytics and AI insights",
-    tech: ["Next.js", "TypeScript", "D3.js", "Python"],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    category: "Frontend",
-    year: "2024",
-  },
-  {
-    id: 3,
-    title: "Mobile Banking App",
-    description: "Secure banking application with biometric authentication",
-    tech: ["React Native", "Firebase", "Node.js"],
-    image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
-    category: "Mobile",
-    year: "2023",
-  },
-  {
-    id: 4,
-    title: "SaaS Platform",
-    description: "Multi-tenant SaaS platform with subscription management",
-    tech: ["Vue.js", "Laravel", "PostgreSQL"],
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    category: "Full Stack",
-    year: "2023",
-  },
 ];
 
 export default function Work() {
@@ -170,29 +128,6 @@ export default function Work() {
         </div>
 
         <CursorChip x={cursorPos.x-50} y={cursorPos.y-10} visible={cursorVisible} />
-
-        {/* View All Projects CTA */}
-        <div className="text-center">
-          <Link
-            to="/projects"
-            className="inline-flex items-center bg-portfolio-text-primary text-white px-8 py-4 rounded-2xl font-medium hover:bg-gray-800 transition-colors"
-          >
-            View All Projects
-            <svg
-              className="w-5 h-5 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
-        </div>
       </div>
     </section>
   );
