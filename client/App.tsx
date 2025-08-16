@@ -15,6 +15,7 @@ import RentoCaseStudy from "./pages/RentoCaseStudy";
 import KarakoramCaseStudy from "./pages/KarakoramCaseStudy";
 import ZealCaseStudy from "./pages/ZealCaseStudy";
 import PasswordUnlock from "./components/PasswordUnlock";
+import ScrollToTop from "./components/ScrollToTop";
 import { useAuth } from "./hooks/use-auth";
 
 const queryClient = new QueryClient();
@@ -39,6 +40,7 @@ const AuthenticatedApp = () => {
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Index />} />
         <Route path="/project/:id" element={<ProjectDetail />} />

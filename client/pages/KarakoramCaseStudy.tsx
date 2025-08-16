@@ -1,8 +1,11 @@
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useParallax } from "@/hooks/useParallax";
 
 export default function KarakoramCaseStudy() {
+  const parallaxOffset = useParallax(0.6);
+  
   const images = [
     { src: "/karakoram/1(cover).jpg", alt: "Karakoram Cover" },
     { src: "/karakoram/2.gif", alt: "Karakoram Image 2" },
@@ -18,12 +21,14 @@ export default function KarakoramCaseStudy() {
     <div className="min-h-screen">
       <Navigation />
       <main>
-        {/* Cover Image - Full Width */}
-        <section className="w-full flex justify-center">
+        {/* Cover Image - Full Width with Fixed Height and Parallax */}
+        <section className="w-full h-[1080px] overflow-hidden relative">
           <img 
             src="/karakoram/1(cover).jpg" 
-            alt="Karakoram Cover" 
-            className="w-full h-auto object-cover"
+            alt="Karakoram Cover" className="w-full h-[150%] object-cover absolute top-0 left-0"
+            style={{
+              transform: `translateY(${parallaxOffset}px)`
+            }}
           />
         </section>
 
@@ -65,7 +70,7 @@ export default function KarakoramCaseStudy() {
             <img 
               src={image.src} 
               alt={image.alt} 
-              className="w-full h-auto object-cover"
+              className="w-full max-w-7xl h-auto object-cover"
             />
           </section>
         ))}

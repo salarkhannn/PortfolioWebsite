@@ -1,18 +1,24 @@
 import { Link } from "react-router-dom";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
+import { useParallax } from "@/hooks/useParallax";
 
 export default function ZealCaseStudy() {
+  const parallaxOffset = useParallax(0.6);
+
   return (
     <div className="min-h-screen">
       <Navigation />
       <main>
-        {/* Cover Image - Full Width */}
-        <section className="w-full flex justify-center">
+        {/* Cover Image - Full Width with Fixed Height and Parallax */}
+        <section className="w-full h-[1080px] overflow-hidden relative">
           <img 
             src="/ZEAL/1(cover).gif" 
             alt="ZEAL Cover" 
-            className="w-full h-auto object-cover"
+            className="w-full h-[150%] object-cover absolute top-0 left-0"
+            style={{
+              transform: `translateY(${parallaxOffset}px)`
+            }}
           />
         </section>
 
