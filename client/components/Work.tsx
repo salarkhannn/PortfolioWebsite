@@ -1,49 +1,44 @@
 import { Link } from "react-router-dom";
 import { useState } from "react";
 import CursorChip from "./CursorChip";
+// import rentoCover from "../assets/cover.png";
 
 const projects = [
   {
-    id: 1,
-    title: "E-commerce Platform",
+    id: "rento",
+    title: "Rento",
     description:
-      "Modern e-commerce solution with React, Node.js, and Stripe integration",
-    tech: ["React", "Node.js", "MongoDB", "Stripe"],
+      "Seamless platform for renting and lending items with focus on frictionless UX",
+    tech: ["React Native", "UX Design", "Firebase", "Node.js"],
     image:
-      "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=800&h=600&fit=crop",
-    category: "Full Stack",
+      "/Rento/cover.png",
+    category: "Mobile App",
     year: "2024",
+    caseStudy: "/case-study/rento",
   },
   {
-    id: 2,
-    title: "AI Dashboard",
+    id: "karakoram",
+    title: "Karakoram",
     description:
-      "Data visualization dashboard with real-time analytics and AI insights",
-    tech: ["Next.js", "TypeScript", "D3.js", "Python"],
+      "Visual storytelling project showcasing the majestic mountain range through design",
+    tech: ["Design", "Visual Storytelling", "Photography"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800&h=600&fit=crop",
-    category: "Frontend",
+      "/karakoram/1(cover).jpg",
+    category: "Design",
     year: "2024",
+    caseStudy: "/case-study/karakoram",
   },
   {
-    id: 3,
-    title: "Mobile Banking App",
-    description: "Secure banking application with biometric authentication",
-    tech: ["React Native", "Firebase", "Node.js"],
+    id: "zeal",
+    title: "ZEAL",
+    description:
+      "Plant-based energy drink brand identity with bold packaging and visual design",
+    tech: ["Logo Design", "Branding", "Packaging"],
     image:
-      "https://images.unsplash.com/photo-1563013544-824ae1b704d3?w=800&h=600&fit=crop",
-    category: "Mobile",
-    year: "2023",
-  },
-  {
-    id: 4,
-    title: "SaaS Platform",
-    description: "Multi-tenant SaaS platform with subscription management",
-    tech: ["Vue.js", "Laravel", "PostgreSQL"],
-    image:
-      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&h=600&fit=crop",
-    category: "Full Stack",
-    year: "2023",
+      "/ZEAL/1(cover).gif",
+    category: "Branding",
+    year: "2024",
+    caseStudy: "/case-study/zeal",
   },
 ];
 
@@ -83,7 +78,7 @@ export default function Work() {
             </span>
           </div>
           <h2 className="text-4xl md:text-5xl font-serif font-normal text-portfolio-text-primary mb-6 leading-tight">
-            Featured Work & Projects
+            Featured Case Studies
           </h2>
           <p className="text-lg text-portfolio-text-secondary max-w-2xl mx-auto">
             Explore my latest projects showcasing modern development practices
@@ -92,12 +87,12 @@ export default function Work() {
         </div>
 
         {/* Projects Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
+        <div className="flex flex-col justify-center gap-8 mb-16">
           {projects.map((project) => (
             <Link
               key={project.id}
-              to={`/project/${project.id}`}
-              className="group bg-white rounded-3xl overflow-hidden shadow-sm border-4 border-gray-100 transition-all duration-100 h-[480px]"
+              to={project.caseStudy || `/project/${project.id}`}
+              className="group bg-white rounded-2xl overflow-hidden shadow-sm border-4 border-gray-100 transition-all duration-100 h-[600px]"
               onMouseMove={handleMouseMove}
               onMouseEnter={handleMouseEnter}
               onMouseLeave={handleMouseLeave}
@@ -118,6 +113,14 @@ export default function Work() {
                   <p className="text-portfolio-text-secondary mb-4 leading-relaxed">
                     {project.description}
                   </p>
+                  {project.caseStudy && (
+                    <span className="inline-flex items-center text-sm font-medium text-blue-600">
+                      View Case Study
+                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                      </svg>
+                    </span>
+                  )}
                 </div>
               </div>
             </Link>
@@ -125,29 +128,6 @@ export default function Work() {
         </div>
 
         <CursorChip x={cursorPos.x-50} y={cursorPos.y-10} visible={cursorVisible} />
-
-        {/* View All Projects CTA */}
-        <div className="text-center">
-          <Link
-            to="/projects"
-            className="inline-flex items-center bg-portfolio-text-primary text-white px-8 py-4 rounded-2xl font-medium hover:bg-gray-800 transition-colors"
-          >
-            View All Projects
-            <svg
-              className="w-5 h-5 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M17 8l4 4m0 0l-4 4m4-4H3"
-              />
-            </svg>
-          </Link>
-        </div>
       </div>
     </section>
   );

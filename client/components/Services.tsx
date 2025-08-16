@@ -4,31 +4,28 @@ const services = {
     "Web Apps",
     "Mobile Apps",
     "Dashboards",
-    "Product Configurators (e.g., neon sign builder)",
-    "SaaS Platforms",
-    "Workflow Automation Tools",
+    "SaaS Platforms", 
   ],
   "Brand & Creative": [
     "Brand Identity Design",
     "Logo Systems",
     "Brand Guidelines",
-    "Social Media Assets (Carousels, Ads)",
+    "Social Media Assets",
     "Pitch Deck Design",
-    "Illustrations & Icon Sets",
   ],
-  "Web & Commerce": [
+  "Website": [
     "E-commerce Stores (Shopify, Custom)",
     "Shopify App Development",
     "No-Code Sites",
-    "Portfolios & Marketing Sites",,
+    "Portfolios & Marketing Sites",
+    "SAAS",
+    "No-Code"
   ],
-  "Development & Consulting": [
-    "React & Next.js Development",
-    "Tailwind CSS Design Systems",
-    "API Integrations",
-    "Database-Driven Applications",
-    "UI/UX Audits",
-    "Product Strategy & Validation",
+  "Development": [
+    "Website",
+    "Web Apps",
+    "Mobile Apps",
+    "Databases",
   ],
 };
 
