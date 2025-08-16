@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { BookingButton } from "./BookingButton";
 import { useAuth } from "@/hooks/use-auth";
 import { LogOut } from "lucide-react";
@@ -7,12 +7,30 @@ import { LogOut } from "lucide-react";
 export default function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { logout } = useAuth();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    const isOnHomePage = location.pathname === '/';
+    
+    if (isOnHomePage) {
+      // If we're on the home page, just scroll to the section
+      const element = document.getElementById(sectionId);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
+    } else {
+      // If we're on a different page, navigate to home and then scroll
+      navigate('/', { replace: true });
+      // Use setTimeout to ensure the page has loaded before scrolling
+      setTimeout(() => {
+        const element = document.getElementById(sectionId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
     }
+    
     setIsMobileMenuOpen(false); // Close mobile menu on link click
   };
 
