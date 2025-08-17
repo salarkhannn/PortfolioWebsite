@@ -22,7 +22,7 @@ export interface CalcomEmbedOptions {
   };
 }
 
-export type BookingType = 'consultation' | 'project-discussion' | 'general';
+export type BookingType = 'quickchat';
 
 export interface BookingModalProps {
   isOpen: boolean;

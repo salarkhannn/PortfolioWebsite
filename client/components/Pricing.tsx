@@ -1,61 +1,81 @@
+import { useState } from "react";
 import { BookingButton } from "./BookingButton";
+import { Switch } from "./ui/switch";
 
-const pricingPlans = [
+const designOnlyPlans = [
   {
     id: 1,
-    name: "Landing Page",
+    name: "Landing Page Design",
     price: "$500",
-    description: "Perfect for small businesses and personal brands",
+    description: "Conversion-focused single page design",
     features: [
-      "Custom responsive design",
-      "SEO optimization",
-      "Contact form integration",
-      "Google Analytics setup",
-      "1 revision round",
-      "2-week delivery",
+      "Custom layouts tailored to your brand",
+      "Responsive UI for desktop & mobile",
+      "Figma prototype + handoff to dev team",
     ],
     popular: false,
-    
   },
   {
     id: 2,
     name: "Product Design",
     price: "$1000",
-    description: "Comprehensive UI/UX design for web and mobile apps",
+    description: "Complete UI/UX for web or mobile apps",
     features: [
-      "User research & personas",
-      "Wireframing & prototyping",
-      "High-fidelity designs",
-      "Design system creation",
-      "Usability testing",
-      "Developer handoff",
-      "3 revision rounds",
-      "4-week delivery",
+      "Wireframes, flows, and interactive prototypes",
+      "Design system + reusable components",
+      "Developer-ready design files",
     ],
     popular: true,
-    
-  },
-  {
-    id: 3,
-    name: "Custom Solution",
-    price: null,
-    description: "Tailored development for complex projects",
-    features: [
-      "Full-stack development",
-      "Custom integrations",
-      "Database design",
-      "API development",
-      "Testing & deployment",
-      "Ongoing maintenance",
-      "Unlimited revisions",
-      "Timeline varies",
-    ],
-    popular: false,
-    
   },
 ];
 
+const designAndDevPlans = [
+  {
+    id: 1,
+    name: "Landing Page Design + Development",
+    price: "$700",
+    description: "Everything in Landing Page Design",
+    features: [
+      "Fully built landing page (code or no-code)",
+      "Optimized for speed & SEO",
+      "Domain setup + deployment included",
+    ],
+    popular: false,
+  },
+  {
+    id: 2,
+    name: "Product Design + Development",
+    price: "$1300",
+    description: "Everything in Product Design",
+    features: [
+      "End-to-end development (web, mobile, or SaaS MVP)",
+      "Database + integrations (auth, payments, analytics)",
+      "Deployment + live product handover",
+    ],
+    popular: true,
+  },
+];
+
+const customPlan = {
+  id: 3,
+  name: "Custom Plan",
+  price: null,
+  description: "Contact for pricing",
+  features: [
+    "Tailored product strategy, design & development",
+    "Full branding package (logo, identity, guidelines, pitch deck)",
+    "Advanced integrations (APIs, dashboards, auth, payments)",
+    "Scalable architecture for growth",
+    "Ongoing support & iteration after launch",
+  ],
+  popular: false,
+};
+
 export default function Pricing() {
+  const [includeDevelopment, setIncludeDevelopment] = useState(false);
+  
+  const currentPlans = includeDevelopment ? designAndDevPlans : designOnlyPlans;
+  
   return (
     <section id="pricing" className="py-24 bg-white">
       <div className="max-w-7xl mx-auto px-4">
@@ -87,9 +107,34 @@ export default function Pricing() {
           </p>
         </div>
 
+        {/* Toggle Switch */}
+        <div className="flex items-center justify-center mb-12">
+          <div className="flex items-center space-x-4 bg-gray-50 rounded-2xl p-2">
+            <span className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+              !includeDevelopment 
+                ? 'bg-white text-portfolio-text-primary shadow-sm' 
+                : 'text-portfolio-text-secondary'
+            }`}>
+              Design
+            </span>
+            <Switch
+              checked={includeDevelopment}
+              onCheckedChange={setIncludeDevelopment}
+              className="data-[state=checked]:bg-portfolio-blue"
+            />
+            <span className={`px-4 py-2 rounded-xl text-sm font-medium transition-all ${
+              includeDevelopment 
+                ? 'bg-white text-portfolio-text-primary shadow-sm' 
+                : 'text-portfolio-text-secondary'
+            }`}>
+              Design + Development
+            </span>
+          </div>
+        </div>
+
         {/* Pricing Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {pricingPlans.map((plan) => (
+          {currentPlans.map((plan) => (
             <div
               key={plan.id}
               className={`
@@ -103,17 +148,11 @@ export default function Pricing() {
                   {plan.name}
                 </h3>
                 <div className="mb-4">
-                  {plan.price ? (
-                    <div className="flex items-baseline justify-center">
-                      <span className="text-4xl md:text-5xl font-bold text-portfolio-text-primary">
-                        {plan.price}
-                      </span>
-                    </div>
-                  ) : (
-                    <div className="text-2xl md:text-3xl font-bold text-portfolio-text-primary">
-                      Let's Talk
-                    </div>
-                  )}
+                  <div className="flex items-baseline justify-center">
+                    <span className="text-4xl md:text-5xl font-bold text-portfolio-text-primary">
+                      {plan.price}
+                    </span>
+                  </div>
                 </div>
                 <p className="text-portfolio-text-secondary">
                   {plan.description}
@@ -148,7 +187,7 @@ export default function Pricing() {
 
               {/* CTA Button */}
               <BookingButton
-                bookingType="consultation"
+                bookingType="quickchat"
                 size="lg"
                 className={`w-full ${plan.popular ? 'bg-portfolio-blue text-white hover:bg-blue-700 shadow-md hover:shadow-lg' : 'bg-gray-100 text-portfolio-text-primary hover:bg-gray-200'}`}
               >
@@ -175,6 +214,73 @@ export default function Pricing() {
               )}
             </div>
           ))}
+          
+          {/* Custom Plan Card - Always Visible */}
+          <div
+            className="relative bg-white rounded-3xl p-8 border border-gray-200 hover:border-gray-300 transition-all duration-300 hover:shadow-xl"
+          >
+            {/* Plan Header */}
+            <div className="text-center mb-8">
+              <h3 className="text-2xl font-serif font-normal text-portfolio-text-primary mb-2">
+                {customPlan.name}
+              </h3>
+              <div className="mb-4">
+                <div className="text-2xl md:text-3xl font-bold text-portfolio-text-primary">
+                  Let's Talk
+                </div>
+              </div>
+              <p className="text-portfolio-text-secondary">
+                {customPlan.description}
+              </p>
+            </div>
+
+            {/* Features List */}
+            <div className="space-y-4 mb-8">
+              {customPlan.features.map((feature, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="flex-shrink-0 w-5 h-5 rounded-full bg-green-100 flex items-center justify-center mt-0.5 mr-3">
+                    <svg
+                      className="w-3 h-3 text-green-600"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M5 13l4 4L19 7"
+                      />
+                    </svg>
+                  </div>
+                  <span className="text-portfolio-text-secondary text-sm leading-relaxed">
+                    {feature}
+                  </span>
+                </div>
+              ))}
+            </div>
+
+            {/* CTA Button */}
+            <BookingButton
+              bookingType="quickchat"
+              size="lg"
+              className="w-full bg-gray-100 text-portfolio-text-primary hover:bg-gray-200"
+            >
+              <svg
+                className="w-5 h-5 mr-3"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2}
+                  d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+                />
+              </svg>
+            </BookingButton>
+          </div>
         </div>
 
         {/* Additional Info */}

@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
 import { BookingButtonProps } from '../types/calcom';
-import { generateCalLink, openCalcomPopup } from '../lib/calcom';
+import { generateCalLink } from '../lib/calcom';
 import { BookingModal } from './BookingModal';
 import { cn } from '../lib/utils';
 
 export const BookingButton: React.FC<BookingButtonProps> = ({
-  bookingType = 'consultation',
+  bookingType = 'quickchat',
   variant = 'primary',
   size = 'md',
   className,
@@ -18,11 +18,7 @@ export const BookingButton: React.FC<BookingButtonProps> = ({
   const finalCalLink = calLink || generateCalLink(bookingType);
 
   const handleClick = () => {
-    // For better UX, we'll use the modal approach
     setIsModalOpen(true);
-    
-    // Alternative: Use popup approach
-    // openCalcomPopup(finalCalLink);
   };
 
   const baseClasses = "inline-flex items-center justify-center rounded-2xl font-medium transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-offset-2";
