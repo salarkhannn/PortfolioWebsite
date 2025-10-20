@@ -6,7 +6,7 @@ const designOnlyPlans = [
   {
     id: 1,
     name: "Landing Page Design",
-    price: "$500",
+    price: "TBA",
     description: "Conversion-focused single page design",
     features: [
       "Custom layouts tailored to your brand",
@@ -18,7 +18,7 @@ const designOnlyPlans = [
   {
     id: 2,
     name: "Product Design",
-    price: "$1000",
+    price: "TBA",
     description: "Complete UI/UX for web or mobile apps",
     features: [
       "Wireframes, flows, and interactive prototypes",
@@ -33,7 +33,7 @@ const designAndDevPlans = [
   {
     id: 1,
     name: "Landing Page Design + Development",
-    price: "$700",
+    price: "TBA",
     description: "Everything in Landing Page Design",
     features: [
       "Fully built landing page (code or no-code)",
@@ -45,7 +45,7 @@ const designAndDevPlans = [
   {
     id: 2,
     name: "Product Design + Development",
-    price: "$1300",
+    price: "TBA",
     description: "Everything in Product Design",
     features: [
       "End-to-end development (web, mobile, or SaaS MVP)",
