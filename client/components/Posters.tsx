@@ -48,11 +48,11 @@ export default function Posters() {
   }
 
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2">
+    <div className="columns-1 md:columns-2 lg:columns-3 gap-6 space-y-6">
       {posterUrls.map((url, index) => (
         <div
           key={index}
-          className="group relative overflow-hidden"
+          className="group relative overflow-hidden break-inside-avoid"
         >
           <img
             src={url}
