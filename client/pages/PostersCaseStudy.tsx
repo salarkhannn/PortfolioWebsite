@@ -12,56 +12,94 @@ export default function PostersCaseStudy() {
       <Navigation />
       <main>
         <div className="w-full flex justify-center pt-60 pb-32">
-          <h1 className="text-7xl md:text-9xl font-serif font-bold mb-4">
+          <h1 className="text-7xl md:text-9xl font-serif font-normal tracking-tighter mb-4">
             Poster Exploration
           </h1>
         </div>
         {/* Posters Grid Section */}
-        <section className="py-16 bg-gray-50">
+        <section className="py-16">
           <div className="max-w-full mx-auto px-4">
             <Posters />
           </div>
         </section>
+                {/* Related Projects */}
+        <section className="py-16 bg-white">
+          <div className="max-w-6xl mx-auto px-4">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-serif font-normal text-gray-900 mb-4">Other Projects</h2>
+              <p className="text-gray-600 max-w-2xl mx-auto">
+                Explore more of my work showcasing different design approaches and technical solutions
+              </p>
+            </div>
+            
+            <div className="flex flex-col gap-8">
 
-        {/* Navigation to Other Projects */}
-        <section className="py-16 bg-gray-50">
-          <div className="max-w-7xl mx-auto px-4">
-            <div className="flex justify-between items-center">
-              <Link 
-                to="/case-study/zeal" 
-                className="group flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+                            <Link
+                to="/case-study/rento"
+                className="group bg-white rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
               >
-                <svg 
-                  className="w-6 h-6 mr-2 transform group-hover:-translate-x-1 transition-transform" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-                </svg>
-                <span className="text-lg">Previous Project</span>
+                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
+                  <img
+                    src="/Rento/cover.png"
+                    alt="Rento"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">Rento</h3>
+                  <p className="text-gray-600 mb-4">Seamless platform for renting and lending items with focus on frictionless UX</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">React Native</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">UX Design</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Firebase</span>
+                  </div>
+                </div>
               </Link>
 
-              <Link 
-                to="/" 
-                className="text-lg text-gray-600 hover:text-gray-900 transition-colors"
+              {/* Karakoram */}
+              <Link
+                to="/case-study/karakoram"
+                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
               >
-                Back to Home
+                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
+                  <img
+                    src="/karakoram/1(cover).jpg"
+                    alt="Karakoram"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">Karakoram</h3>
+                  <p className="text-gray-600 mb-4">Visual storytelling project showcasing the majestic mountain range through design</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Design</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Visual Storytelling</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Photography</span>
+                  </div>
+                </div>
               </Link>
 
-              <Link 
-                to="/case-study/rento" 
-                className="group flex items-center text-gray-600 hover:text-gray-900 transition-colors"
+              {/* ZEAL */}
+              <Link
+                to="/case-study/zeal"
+                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
               >
-                <span className="text-lg">Next Project</span>
-                <svg 
-                  className="w-6 h-6 ml-2 transform group-hover:translate-x-1 transition-transform" 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                </svg>
+                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
+                  <img
+                    src="/ZEAL/1(cover).gif"
+                    alt="ZEAL"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">ZEAL</h3>
+                  <p className="text-gray-600 mb-4">Plant-based energy drink brand identity with bold packaging and visual design</p>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Logo Design</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Branding</span>
+                    <span className="text-sm bg-gray-200 text-gray-700 px-3 py-1 rounded-full">Packaging</span>
+                  </div>
+                </div>
               </Link>
             </div>
           </div>
