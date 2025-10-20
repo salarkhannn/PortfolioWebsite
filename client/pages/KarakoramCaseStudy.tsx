@@ -148,6 +148,23 @@ export default function KarakoramCaseStudy() {
                   </div>
                 </div>
               </Link>
+              
+              <Link
+                to="/case-study/posters"
+                className="group bg-gray-50 rounded-2xl overflow-hidden hover:shadow-lg transition-all duration-300 flex flex-col md:flex-row"
+              >
+                <div className="md:w-1/3 aspect-[4/3] md:aspect-auto overflow-hidden">
+                  <img
+                    src=""
+                    alt="Posters"
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                </div>
+                <div className="md:w-2/3 p-6 flex flex-col justify-center">
+                  <h3 className="text-xl font-medium text-gray-900 mb-3 group-hover:text-gray-700">Posters</h3>
+                  <p className="text-gray-600 mb-4">Poster Exploration</p>
+                </div>
+              </Link>
             </div>
           </div>
         </section>

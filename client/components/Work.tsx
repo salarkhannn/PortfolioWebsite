@@ -40,6 +40,18 @@ const projects = [
     year: "2024",
     caseStudy: "/case-study/zeal",
   },
+  {
+    id: "posters",
+    title: "Poster Collection",
+    description:
+      "Diverse range of poster designs exploring typography, visual communication, and design principles",
+    tech: ["Graphic Design", "Typography", "Visual Communication"],
+    image:
+      "/Posters/cover.jpg",
+    category: "Design",
+    year: "2024",
+    caseStudy: "/case-study/posters",
+  },
 ];
 
 export default function Work() {
