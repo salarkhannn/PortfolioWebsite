@@ -1,12 +1,29 @@
-/**
- * Shared code between client and server
- * Useful to share types between client and server
- * and/or small pure JS functions that can be used on both client and server
- */
+import { supabase } from "@/lib/supabase";
 
-/**
- * Example response type for /api/demo
- */
-export interface DemoResponse {
-  message: string;
+export async function getPosterUrls() {
+  const { data, error } = await supabase.storage
+    .from("posters")
+    .list("", {
+      limit: 100,
+      sortBy: { column: "name", order: "asc" },
+    });
+
+  if (error) {
+    console.error("Error listing posters:", error.message);
+    return [];
+  }
+
+  if (!data || data.length === 0) {
+    console.log("No posters found.");
+    return [];
+  }
+
+  const urls = data.map(
+    (item) =>
+      supabase.storage
+        .from("posters")
+        .getPublicUrl(item.name).data.publicUrl
+  );
+
+  return urls;
 }

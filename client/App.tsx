@@ -14,6 +14,7 @@ import NotFound from "./pages/NotFound";
 import RentoCaseStudy from "./pages/RentoCaseStudy";
 import KarakoramCaseStudy from "./pages/KarakoramCaseStudy";
 import ZealCaseStudy from "./pages/ZealCaseStudy";
+import PostersCaseStudy from "./pages/PostersCaseStudy";
 import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
@@ -33,6 +34,7 @@ const App = () => (
           <Route path="/case-study/rento" element={<RentoCaseStudy />} />
           <Route path="/case-study/karakoram" element={<KarakoramCaseStudy />} />
           <Route path="/case-study/zeal" element={<ZealCaseStudy />} />
+          <Route path="/case-study/posters" element={<PostersCaseStudy />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

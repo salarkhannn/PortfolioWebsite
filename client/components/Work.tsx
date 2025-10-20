@@ -40,6 +40,30 @@ const projects = [
     year: "2024",
     caseStudy: "/case-study/zeal",
   },
+  {
+    id: "posters",
+    title: "Poster Collection",
+    description:
+      "Diverse range of poster designs exploring typography, visual communication, and design principles",
+    tech: ["Graphic Design", "Typography", "Visual Communication"],
+    image:
+      "/Posters/cover.png",
+    category: "Design",
+    year: "2024",
+    caseStudy: "/case-study/posters",
+  },
+  {
+    id: "flowly",
+    title: "Flowly (work in progress)",
+    description:
+      "Innovative productivity tool designed to streamline workflows and enhance team collaboration",
+    tech: ["Web Design", "UX/UI", "Product Design"],
+    image:
+      "/Flowly/cover.png",
+    category: "Web Design",
+    year: "2024",
+    externalLink: "https://getflowly.framer.website/",
+  },
 ];
 
 export default function Work() {
@@ -88,43 +112,63 @@ export default function Work() {
 
         {/* Projects Grid */}
         <div className="flex flex-col justify-center gap-8 mb-16">
-          {projects.map((project) => (
-            <Link
-              key={project.id}
-              to={project.caseStudy || `/project/${project.id}`}
-              className="group bg-white rounded-2xl overflow-hidden shadow-sm border-4 border-gray-100 transition-all duration-100 h-[600px]"
-              onMouseMove={handleMouseMove}
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-            >
-              {/* Project Image */}
-              <div className="relative overflow-hidden h-full">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-500"
-                />
+          {projects.map((project) => {
+            const isExternal = "externalLink" in project && project.externalLink;
+            const href = isExternal ? project.externalLink : (project.caseStudy || `/project/${project.id}`);
+            
+            const handleExternalClick = (e: React.MouseEvent) => {
+              if (isExternal) {
+                e.preventDefault();
+                window.open(href, '_blank');
+              }
+            };
 
-                {/* Hover Content */}
-                <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white to-transparent pt-32 pb-8 px-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4">
-                  <h3 className="text-2xl font-serif font-normal text-portfolio-text-primary mb-3">
-                    {project.title}
-                  </h3>
-                  <p className="text-portfolio-text-secondary mb-4 leading-relaxed">
-                    {project.description}
-                  </p>
-                  {project.caseStudy && (
-                    <span className="inline-flex items-center text-sm font-medium text-blue-600">
-                      View Case Study
-                      <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
-                    </span>
-                  )}
+            return (
+              <Link
+                key={project.id}
+                to={isExternal ? "#" : (href as string)}
+                onClick={handleExternalClick}
+                className="group bg-white rounded-2xl overflow-hidden shadow-sm border-4 border-gray-100 transition-all duration-100 aspect-[5/3]"
+                onMouseMove={handleMouseMove}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                {/* Project Image */}
+                <div className="relative overflow-hidden h-full">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover transition-transform duration-500"
+                  />
+
+                  {/* Hover Content */}
+                  <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-white to-transparent pt-32 pb-8 px-8 opacity-0 group-hover:opacity-100 transition-opacity duration-300 transform translate-y-4">
+                    <h3 className="text-2xl font-serif font-normal text-portfolio-text-primary mb-3">
+                      {project.title}
+                    </h3>
+                    <p className="text-portfolio-text-secondary mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+                    {isExternal ? (
+                      <span className="inline-flex items-center text-sm font-medium text-blue-600">
+                        Visit Website
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                        </svg>
+                      </span>
+                    ) : (
+                      <span className="inline-flex items-center text-sm font-medium text-blue-600">
+                        View Case Study
+                        <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+                        </svg>
+                      </span>
+                    )}
+                  </div>
                 </div>
-              </div>
-            </Link>
-          ))}
+              </Link>
+            );
+          })}
         </div>
 
         <CursorChip x={cursorPos.x-50} y={cursorPos.y-10} visible={cursorVisible} />
