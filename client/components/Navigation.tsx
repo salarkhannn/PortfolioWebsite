@@ -75,12 +75,12 @@ export default function Navigation() {
           >
             Services
           </button>
-          <button
+          {/* <button
             onClick={() => scrollToSection("pricing")}
             className="text-white/90 hover:text-white transition-colors text-sm font-normal tracking-tight"
           >
             Pricing
-          </button>
+          </button> */}
         </div>
 
         {/* Right Side */}

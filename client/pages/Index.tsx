@@ -13,7 +13,7 @@ export default function Index() {
         <Hero />
         <Work />
         <Services />
-        <Pricing />
+        {/* <Pricing /> */}
       </main>
       <Footer />
     </div>
